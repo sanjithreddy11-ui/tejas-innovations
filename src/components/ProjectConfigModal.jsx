@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Check } from "lucide-react";
 
 const steps = ["Business", "Services", "Requirements", "Budget", "Summary"];
-
+const isMobile =
+  typeof window !== "undefined" && window.innerWidth < 768;
 const services = [
   "Web Design & Development",
   "AI Solutions",
@@ -105,7 +106,7 @@ export default function ProjectConfigModal({ isOpen, onClose }) {
             border: "1px solid #e4e4e7",
             background: "#ffffff",
             boxShadow: "0 20px 80px rgba(0,0,0,0.10)",
-            padding: "40px",
+           padding: isMobile ? "24px" : "40px",
             boxSizing: "border-box",
           }}
         >
@@ -115,7 +116,7 @@ export default function ProjectConfigModal({ isOpen, onClose }) {
               <p style={{ margin: 0, fontSize: "11px", letterSpacing: "0.3em", color: "#a1a1aa", textTransform: "uppercase" }}>
                 Tejas
               </p>
-              <h2 style={{ margin: "10px 0 6px", fontSize: "36px", fontWeight: 300, color: "#111" }}>
+              <h2 style={{ margin: "10px 0 6px", fontSize: isMobile ? "28px" : "36px", fontWeight: 300, color: "#111" }}>
                 Configure Your Project
               </h2>
               <p style={{ margin: 0, fontSize: "15px", color: "#71717a" }}>
@@ -143,7 +144,14 @@ export default function ProjectConfigModal({ isOpen, onClose }) {
           </div>
 
           {/* Step Progress */}
-          <div style={{ display: "flex", alignItems: "flex-start", marginTop: "36px" }}>
+         <div
+  style={{
+    display: "flex",
+    overflowX: "auto",
+    paddingBottom: "10px",
+    marginTop: "36px",
+  }}
+>
             {steps.map((item, index) => (
               <div key={item} style={{ display: "flex", alignItems: "center", flex: 1 }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
@@ -190,7 +198,7 @@ export default function ProjectConfigModal({ isOpen, onClose }) {
           {/* Content */}
           <div style={{ marginTop: "40px", minHeight: "280px" }}>
             {step === 0 && (
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div style={{ display: "grid",gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "16px" }}>
                 <input style={inputStyle} placeholder="Full Name" value={formData.name} onChange={(e) => updateField("name", e.target.value)} />
                 <input style={inputStyle} placeholder="Email Address" value={formData.email} onChange={(e) => updateField("email", e.target.value)} />
                 <input style={inputStyle} placeholder="Phone Number" value={formData.phone} onChange={(e) => updateField("phone", e.target.value)} />
