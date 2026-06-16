@@ -5,9 +5,9 @@ import { ParticleMesh } from "./ParticleMesh";
 import { Reveal } from "./Reveal";
 
 const NAV = [
-  { label: "Work", href: "#work" },
+  { label: "About Us", href: "#AboutSection" },
   { label: "Services", href: "#services" },
-  { label: "Studio", href: "#studio" },
+  { label: "FAQS", href: "#FAQSection" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -30,7 +30,7 @@ export default function Hero() {
     <section className="relative min-h-screen bg-[#03060B] text-white overflow-hidden">
       {/* Navbar */}
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        className={` inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
             ? "backdrop-blur-md bg-[#03060B]/40"
             : "bg-transparent"
@@ -60,14 +60,14 @@ export default function Hero() {
             </ul>
           </nav>
 
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 text-[13px] text-white/85 transition-colors hover:text-white"
-          >
-            <span>Start Project</span>
+         <a
+  href="#contact"
+  className="group inline-flex items-center gap-3 rounded-full bg-[#B8F18D] px-7 py-4 text-sm font-medium text-[#03060B] transition-all duration-300 hover:scale-105 hover:bg-[#C6F7A3]"
+>
+  <span>Start Project</span>
 
-            <span className="inline-block h-[6px] w-[6px] rounded-full bg-[#B8F18D] transition-transform group-hover:scale-125" />
-          </a>
+  <span className="inline-block h-2 w-2 rounded-full bg-[#03060B] transition-transform duration-300 group-hover:scale-125" />
+</a>
         </div>
       </header>
 

@@ -3,7 +3,7 @@
 :root {
   --background: #03060b;
   --foreground: #ffffff;
-  --accent: #b8f18d;
+  --accent: #8b5cf6;
 }
 
 * {
@@ -26,8 +26,8 @@ body {
 }
 
 ::selection {
-  background: #b8f18d;
-  color: #03060b;
+  background: #8b5cf6;
+  color: #fff;
 }
 
 /* Reveal Animation */
@@ -44,4 +44,33 @@ body {
 .reveal.in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== NEXUS STYLES ===== */
+
+.gradient-text {
+  color: #ffffff;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
+.text-steel {
+  color: #9ca3af;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.font-display {
+  font-family: Inter, sans-serif;
+}
+
+.founder-grid-bg {
+  background-image:
+    linear-gradient(rgba(139,92,246,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,92,246,0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
