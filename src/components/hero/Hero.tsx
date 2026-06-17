@@ -143,7 +143,7 @@ export default function Hero() {
                 >
                   <span className="inline-block h-px w-10 bg-white/40 transition-all group-hover:w-16 group-hover:bg-[#B8F18D]" />
 
-                  Selected Work
+                 
                 </a>
               </div>
             </Reveal>
