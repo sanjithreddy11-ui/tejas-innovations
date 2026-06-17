@@ -27,7 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-[#03060B] text-white overflow-hidden">
+    <section className="relative min-h-screen bg-[#03060B] text-white overflow-x-hidden w-full">
       {/* Navbar */}
       <header
         className={` inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -84,9 +84,9 @@ export default function Hero() {
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col px-6 pt-28 md:px-10 md:pt-32">
-          <div className="flex items-start justify-between">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <Reveal>
-              <p className="mt-20pb-16 md:pb-24 md:ml-40">
+            <p className="mt-20 pb-16 md:pb-24 md:ml-40 max-w-md">
                 An independent digital agency designing brand, product,
                 <br />
                 and web for category leaders.
