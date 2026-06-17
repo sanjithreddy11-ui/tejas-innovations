@@ -14,7 +14,7 @@ export default function ContactSection() {
         <img
           src="/hand.png"
           alt="Background"
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover object-center opacity-70"
         />
 
         <div className="absolute inset-0 bg-black/40" />
