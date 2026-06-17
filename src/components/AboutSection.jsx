@@ -63,7 +63,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="glass-card rounded-2xl p-8 sm:p-10 text-center max-w-4xl mx-auto"
         >
-          <p className="text-steel text-lg leading-relaxed">
+          <p className="text-steel text-lg leading-relaxed italic">
             "We are two Computer Science & Engineering students from{" "}
             <span className="text-foreground font-medium">ADYPU</span> passionate about helping businesses
             establish a strong digital presence through modern technology and innovative web solutions."

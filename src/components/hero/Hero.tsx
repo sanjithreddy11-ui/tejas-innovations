@@ -83,10 +83,10 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col px-6 pt-28 md:px-10 md:pt-32">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col px-6 pt-10 md:px-10 md:pt-32">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <Reveal>
-            <p className="mt-10 pb-8 md:mt-20 md:pb-16 md:ml-40 max-w-md">
+            <p className="mt-1 pb-8 md:mt-2 md:pb-16 md:ml-40 max-w-md">
                 An independent digital agency designing brand, product,
                 <br />
                 and web for category leaders.
@@ -101,7 +101,7 @@ export default function Hero() {
             </Reveal>
           </div>
 
-<div className="mt-16 md:mt-auto pb-16 md:pb-24 md:pl-40">           <Reveal>
+<div className="mt-5 md:mt-3 pb-16 md:pb-24 md:pl-40">           <Reveal>
               <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 backdrop-blur-sm">
                 <span className="text-[#B8F18D]">
                   ★★★★★
