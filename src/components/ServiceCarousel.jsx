@@ -8,8 +8,10 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const CARD_WIDTH = 360;
-const AUTOPLAY_INTERVAL = 5000;
+const CARD_WIDTH = typeof window !== "undefined" && window.innerWidth < 640
+  ? 280
+  : 360;
+  const AUTOPLAY_INTERVAL = 5000;
 
 export default function ServiceCarousel({
   services,
@@ -64,7 +66,7 @@ export default function ServiceCarousel({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-[500px] flex items-center justify-center overflow-hidden">
+     <div className="relative h-[500px] flex items-center justify-center overflow-x-hidden overflow-y-visible">
         {services.map((service, index) => {
           const diff = getDiff(index);
           const Icon = service.icon;
