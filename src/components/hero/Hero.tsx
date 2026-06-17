@@ -72,7 +72,7 @@ export default function Hero() {
       </header>
 
       {/* Hero */}
-      <div className="relative h-screen min-h-[760px]">
+      <div className="relative min-h-screen">
         {/* Background */}
         <div className="absolute inset-0">
           <ParticleMesh />
@@ -83,12 +83,11 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col px-6 pt-10 md:px-10 md:pt-32">
+       <div className="relative z-10 mx-auto flex max-w-[1480px] flex-col px-6 pt-6 md:px-10 md:pt-16">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <Reveal>
-            <p className="mt-1 pb-8 md:mt-2 md:pb-16 md:ml-40 max-w-md">
+           <p className="pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
                 An independent digital agency designing brand, product,
-                <br />
                 and web for category leaders.
               </p>
             </Reveal>
@@ -101,7 +100,7 @@ export default function Hero() {
             </Reveal>
           </div>
 
-<div className="mt-5 md:mt-3 pb-16 md:pb-24 md:pl-40">           <Reveal>
+<div className="mt-8 md:mt-10 pb-12 md:pb-20 md:pl-40">         <Reveal>
               <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 backdrop-blur-sm">
                 <span className="text-[#B8F18D]">
                   ★★★★★
@@ -114,7 +113,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={120}>
-              <h1 className=" text-[clamp(2.5rem,6.2vw,6.25rem)] leading-[0.92] tracking-[-0.06em] font-bold">
+             <h1 className="text-[clamp(3rem,7vw,7rem)] leading-[0.9] tracking-[-0.05em] font-bold">
                 Building digital
                 experiences 
                  <br />
@@ -128,7 +127,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={260}>
-              <div className="mt-12 flex flex-wrap items-end justify-between gap-8">
+              <div className="mt-8 md:mt-12 flex flex-wrap items-end justify-between gap-6">
                 <p className="max-w-md text-[14px] leading-relaxed text-white/55">
                   A senior studio of designers,
                   engineers, and strategists
