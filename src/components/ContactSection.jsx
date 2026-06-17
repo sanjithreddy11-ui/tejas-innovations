@@ -11,12 +11,18 @@ export default function ContactSection() {
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src="/hand.png"
-          alt="Background"
-          className="w-full h-full object-cover object-center opacity-70"
-        />
-
+      <img
+  src="/hand.png"
+  alt="Background"
+  className="
+    w-full
+    h-full
+    object-cover
+    object-left
+    md:object-center
+    opacity-70
+  "
+/>
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
