@@ -139,30 +139,11 @@ export default function ContactSection() {
                 Tell us about your project and we'll get back to you shortly.
               </p>
 
-             <form
-  className="mt-8 space-y-5"
-  onSubmit={async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.target);
-
-    const response = await fetch(
-      "https://formspree.io/f/mnjyydeb",
-      {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      }
-    );
-
-    if (response.ok) {
-      setSubmitted(true);
-      e.target.reset();
-    }
-  }}
->
+              <form
+                action="https://formspree.io/f/mnjyydeb"
+                method="POST"
+                className="mt-8 space-y-5"
+              >
                 <input
                   type="text"
                   name="name"
