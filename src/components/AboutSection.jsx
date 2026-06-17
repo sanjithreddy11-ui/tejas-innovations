@@ -6,7 +6,7 @@ import FounderCard from "./FounderCard";
 const founders = [
   {
     name: "Yaramada Sanjith Reddy",
-    roles: ["Co-Founder", "Frontend Developer", "UI/UX Designer"],
+    roles: ["Founder", "Frontend Developer", "UI/UX Designer"],
     image: "https://www.image2url.com/r2/default/images/1781367349019-dd00ba69-8448-4872-b418-272891d3ae82.jpeg",
     bio: "Passionate about crafting pixel-perfect interfaces and intuitive user experiences. Specializes in transforming complex business requirements into elegant, responsive web applications.",
     github: "https://github.com/sanjithreddy11-ui",
