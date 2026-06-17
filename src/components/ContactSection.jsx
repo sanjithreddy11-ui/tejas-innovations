@@ -12,20 +12,22 @@ export default function ContactSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
       <div className="absolute inset-0 overflow-hidden">
-  <img
-    src="/hand.png"
-    alt="Background"
-    className="
-      absolute
-      left-1/2
-      top-1/2
-      w-auto
-      h-[120%]
-      -translate-x-1/2
-      -translate-y-1/2
-      opacity-70
-    "
-  />
+        <img
+  src="/hand.png"
+  alt="Background"
+  className="
+    absolute
+    left-1/2
+    top-1/2
+    -translate-x-1/2
+    -translate-y-1/2
+    w-[250%]
+    sm:w-[200%]
+    md:w-[140%]
+    max-w-none
+    opacity-70
+  "
+/>
 </div>
         <div className="absolute inset-0 bg-black/40" />
       </div>
