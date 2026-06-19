@@ -151,5 +151,5 @@ backgroundColor: "#0B0F14",
     </p>
   </div>
 </motion.div>
-);
+);56
 }
