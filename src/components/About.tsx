@@ -37,7 +37,7 @@ export default function About() {
 >
            <h2
   className="
-    text-[36px]
+    text-[22px]
     md:text-[20px]
     lg:text-[35px]
     leading-[1.08]
