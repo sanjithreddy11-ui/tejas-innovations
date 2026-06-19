@@ -85,8 +85,8 @@ export default function Hero() {
         {/* Content */}
        <div className="relative z-10 mx-auto flex max-w-[1480px] flex-col px-6 pt-6 md:px-10 md:pt-16">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <Reveal>
-  <p className="pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
+<Reveal>
+  <p className="hidden lg:block pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
     An independent digital agency designing brand, product,
     and web for category leaders.
   </p>
