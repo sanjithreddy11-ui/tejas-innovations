@@ -17,7 +17,8 @@ export default function ContactSection() {
         <div className="absolute inset-0 overflow-hidden">
           {/* Desktop */}
           <img
-            src="/hand-desktop.png"
+            src="/hand-desktop.webp
+            "
             alt=""
             className="
               hidden md:block
@@ -33,7 +34,7 @@ export default function ContactSection() {
 
           {/* Mobile */}
           <img
-            src="/hand-mobile.png"
+            src="/hand-mobile.webp"
             alt=""
             className="
               md:hidden

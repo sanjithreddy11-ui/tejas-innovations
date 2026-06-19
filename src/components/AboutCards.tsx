@@ -75,7 +75,7 @@ export default function AboutCards() {
               className="relative rounded-[28px] overflow-hidden min-h-[380px] block cursor-pointer"
             >
               <img
-                src="about-card.png"
+                src="about-card.webp"
                 alt="Meet The Founders"
                 className="absolute inset-0 w-full h-full object-cover"
               />
