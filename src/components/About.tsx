@@ -20,7 +20,7 @@ export default function About() {
     <section
       id="about"
      className=" py-32"  >
-      <div className="w-full px-8 lg:px-24">
+      <div className="w-full px-5 sm:px-6 lg:px-24">
    <div className="grid lg:grid-cols-[420px_1fr] gap-6">
           
           {/* LEFT LABEL */}
