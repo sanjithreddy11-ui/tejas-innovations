@@ -68,7 +68,9 @@ body {
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255,255,255,0.08);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .font-display {
   font-family: Inter, sans-serif;
 }

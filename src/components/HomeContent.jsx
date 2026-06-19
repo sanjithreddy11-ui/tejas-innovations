@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import AboutSection from "./AboutSection";
+
 import ServicesSection from "./ServicesSection";
 import ProjectConfigModal from "./ProjectConfigModal";
 
@@ -10,7 +10,7 @@ export default function HomeContent() {
 
   return (
     <>
-      <AboutSection />
+      
 
       <ServicesSection
         onConfigureClick={() => setIsModalOpen(true)}
