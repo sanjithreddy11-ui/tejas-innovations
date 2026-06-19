@@ -1,137 +1,147 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ParticleMesh } from "./ParticleMesh";
-import { Reveal } from "./Reveal";
-
-const NAV = [
-  { label: "About Us", href: "#AboutSection" },
-  { label: "Services", href: "#services" },
-  { label: "FAQS", href: "#FAQSection" },
-  { label: "Contact", href: "#contact" },
-];
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Play,
+} from "lucide-react";
 
 export default function Hero() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-
-    onScroll();
-
-    window.addEventListener("scroll", onScroll, {
-      passive: true,
-    });
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#03060B] text-white">
-      {/* Background */}
+    <section className="relative min-h-screen overflow-hidden bg-[#050709] text-white">
+      {/* Background Grid */}
       <div className="absolute inset-0">
-        <ParticleMesh />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:120px_120px]" />
 
-        <div className="absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_20%,transparent_0%,rgba(3,6,11,0.55)_70%,#03060B_100%)]" />
+        <div className="absolute left-1/2 top-[65%] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#B8F18D]/20 blur-[180px]" />
 
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#03060B]" />
+        <div className="absolute left-[10%] top-[30%] h-24 w-[1px] bg-[#B8F18D]/30" />
+        <div className="absolute left-[10%] top-[35%] h-[1px] w-24 bg-[#B8F18D]/30" />
+
+        <div className="absolute right-[15%] top-[55%] h-24 w-[1px] bg-[#B8F18D]/30" />
+        <div className="absolute right-[15%] top-[60%] h-[1px] w-24 bg-[#B8F18D]/30" />
       </div>
 
       {/* Navbar */}
-      <header
-        className={`relative z-50 transition-all duration-500 ${
-          scrolled
-            ? "backdrop-blur-md bg-[#03060B]/40"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="mx-auto flex max-w-[1480px] items-center justify-between px-6 py-6 md:px-10">
-          <a
-            href="#"
-            className="text-[25px] font-medium tracking-tight"
-          >
-            ● Tejas
-            <span className="text-[#B8F18D]">.</span>
-          </a>
+      <header className="relative z-50 pt-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-4 backdrop-blur-xl">
+          <div className="flex items-center gap-3">
+            <div className="h-3 w-3 bg-[#a2fa8e]" />
+            <span className="text-3xl font-semibold">
+              Tejas
+            </span>
+          </div>
 
-          <nav className="hidden md:block">
-            <ul className="flex items-center gap-9 text-[13px] text-white/70">
-              {NAV.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="transition-colors hover:text-white"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <nav className="hidden md:flex items-center gap-10 text-white/70">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
           </nav>
 
-        
+          <button className="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105">
+            Contact Now
+          </button>
         </div>
       </header>
 
-      {/* Hero Content */}
-     <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-10 pb-20 md:px-20 lg:px-32 md:pt-20">
-        {/* Badge */}
-        <Reveal>
-          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-sm">
-            <span className="text-[#B8F18D]">
-              ★★★★★
-            </span>
+      {/* Hero */}
+      <div className="relative z-20 mx-auto flex max-w-7xl flex-col items-center px-6 pt-24 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3"
+        >
+          <span className="rounded-full bg-white px-3 py-1 text-sm font-medium text-black">
+            New
+          </span>
 
-            <span className="text-sm text-white/75">
-              Trusted Digital Agency
-            </span>
-          </div>
-        </Reveal>
+          <span className="text-white/80">
+            Trusted Digital Agency
+          </span>
 
-        {/* Heading */}
-        <Reveal delay={100}>
-          <h1 className="max-w-[1000px] text-[clamp(3.5rem,8vw,7.5rem)] font-bold leading-[0.92] tracking-[-0.05em]">
-            Building digital
-            <br />
-            experiences that
-            <br />
-            accelerate{" "}
-            <span className="italic text-[#B8F18D]">
-              growth
-            </span>
-            .
-          </h1>
-        </Reveal>
+          <ArrowRight size={16} />
+        </motion.div>
 
-        {/* Description */}
-        <Reveal delay={200}>
-          <div className="mt-8 max-w-xl">
-            <p className="text-base leading-relaxed text-white/60 md:text-lg">
-              A senior studio of designers,
-              engineers and strategists
-              shipping flagship work for
-              funded startups and global
-              brands.
-            </p>
-          </div>
-        </Reveal>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="
+max-w-[850px]
+mx-auto
+text-center
+font-semibold
+leading-[1.05]
+tracking-[-0.04em]
+text-[clamp(3.5rem,6vw,6.5rem)]
+"
+        >
+          Building Digital
+          <br />
+          Experiences That
+          <br />
+          Accelerate
+          <span className="text-[#a2fa8e]">
+            {" "}
+            Growth
+          </span>
+        </motion.h1>
 
-        {/* CTA */}
-        <Reveal delay={300}>
-          <div className="mt-10 flex flex-wrap gap-4">
-           
+        <motion.p
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.3,
+          }}
+          className="mt-8 max-w-2xl text-lg text-white/50"
+        >
+          Powering bold ideas with strategy,
+          creativity and cutting-edge
+          development.
+        </motion.p>
 
-            
-          </div>
-        </Reveal>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+          }}
+          className="mt-10 flex flex-wrap justify-center gap-4"
+        >
+          <button className="flex items-center gap-3 rounded-2xl bg-[#a2fa8e] px-8 py-4 font-semibold text-black">
+            Get Started
+            <ArrowRight size={18} />
+          </button>
 
-        {/* Logo Strip */}
-        <Reveal delay={400}>
-         <div className="mt-24 border-t border-white/10 pt-8">
- 
-</div>
-        </Reveal>
-      </div>
+          <button className="flex items-center gap-3 rounded-2xl bg-white/10 px-8 py-4 font-semibold">
+            <Play size={18} />
+            Watch Demo
+          </button>
+        </motion.div>
+
+        {/* Floating Cards */}
+       </div>
     </section>
   );
 }

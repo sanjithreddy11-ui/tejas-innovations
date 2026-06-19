@@ -120,7 +120,8 @@ export default function ServiceCarousel({
                 rounded-3xl
                 border
                 backdrop-blur-xl
-                bg-[#0B0F14]
+               bg-zinc-800/80
+border-white/15
                 p-8
                 flex
                 flex-col

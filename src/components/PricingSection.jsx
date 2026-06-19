@@ -105,8 +105,8 @@ export default function PricingSection() {
               whileHover={{ y: -8 }}
               className={`relative rounded-[32px] border transition-all duration-300 ${
                 plan.featured
-                  ? "bg-[#a2fa8e] text-black border-[#B9FF66]"
-                  : "bg-[#0A0A0A] text-white border-white/10"
+                  ? "bg-[#a2fa8e] text-black border-[#B9FF66]/20 "
+                  : "bg-zinc-900 text-white border-white/20"
               }`}
             >
               {/* Popular Badge */}
