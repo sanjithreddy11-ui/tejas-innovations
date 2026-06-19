@@ -73,7 +73,7 @@ const [active, setActive] = useState(0);
 
 return ( <section
    id="faq"
-   className="relative py-28 sm:py-32"
+   className="relative py-20 sm:py-15"
  > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <SectionLabel
        number="03"
        label="FAQ"
