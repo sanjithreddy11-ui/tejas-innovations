@@ -95,7 +95,7 @@ export default function Hero() {
 </div>
 
             <Reveal delay={120}>
-  <p className="mt-10 md:mt-0 text-[12px] tracking-[0.22em] text-white/55">
+  <p className="mt-20 md:mt-0 text-[12px] tracking-[0.22em] text-white/55">
     EST. © 2026
   </p>
 </Reveal>
