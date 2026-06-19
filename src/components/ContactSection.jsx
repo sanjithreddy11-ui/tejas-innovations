@@ -15,24 +15,37 @@ export default function ContactSection() {
       >
         {/* Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 overflow-hidden">
-            <img
-              src="/hand.png"
-              alt="Background"
-              className="
-                absolute
-                left-1/2
-                top-1/2
-                -translate-x-1/2
-                -translate-y-1/2
-                w-[250%]
-                sm:w-[200%]
-                md:w-[140%]
-                max-w-none
-                opacity-70
-              "
-            />
-          </div>
+        <div className="absolute inset-0 overflow-hidden">
+  {/* Desktop */}
+  <img
+    src="/hand-desktop.png"
+    alt=""
+    className="
+      hidden md:block
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-cover
+      opacity-70
+    "
+  />
+
+  {/* Mobile */}
+  <img
+    src="/hand-mobile.png"
+    alt=""
+    className="
+      block md:hidden
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-contain
+      opacity-70
+    "
+  />
+</div>
 
           <div className="absolute inset-0 bg-black/40" />
         </div>
