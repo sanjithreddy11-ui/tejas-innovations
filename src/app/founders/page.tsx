@@ -35,7 +35,7 @@ export default function FoundersPage() {
              viewport={{ once: true }}
              className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-4"
            >
-             The Minds Behind <span className="gradient-text italic">Tejas</span>
+             The Minds Behind <span className="gradient-text">Tejas</span>
            </motion.h2>
    
            <motion.p

@@ -24,37 +24,44 @@ export default function AboutCards() {
                 <ArrowRight size={120} strokeWidth={1.5} />
               </div>
             </div>
-
-            <button className="w-fit flex items-center gap-3 bg-black text-white px-6 py-4 rounded-2xl text-lg">
-              Let's Talk
-              <ArrowRight size={18} />
-            </button>
+<a
+  href="#contact"
+  className="w-fit flex items-center gap-3 bg-black text-white px-6 py-4 rounded-2xl text-lg transition-all duration-300 hover:bg-white hover:text-black"
+>
+  Let's Talk
+  <ArrowRight size={18} />
+</a>
           </motion.div>
 
           {/* CARD 2 */}
-          <motion.div
-            whileHover={{ y: -8 }}
-            transition={{ duration: 0.3 }}
-            className="relative rounded-[28px] overflow-hidden min-h-[460px]"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-              alt="Team"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+        <motion.div
+  className="relative overflow-hidden rounded-[28px]"
+>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source
+      src="/videos/showreel.mp4"
+      type="video/mp4"
+    />
+  </video>
 
-            <div className="absolute inset-0 bg-black/20" />
+  <div className="absolute inset-0 bg-black/30" />
 
-            <div className="absolute bottom-8 left-8">
-              <h2 className="text-white text-7xl font-semibold">
-                98%
-              </h2>
+  <div className="absolute bottom-8 left-8 z-10">
+    <h2 className="text-white text-7xl font-semibold">
+      98%
+    </h2>
 
-              <p className="text-white text-2xl mt-2">
-                Client Satisfaction Rate
-              </p>
-            </div>
-          </motion.div>
+    <p className="text-white text-2xl mt-2">
+      Client Satisfaction Rate
+    </p>
+  </div>
+</motion.div>
 
           {/* CARD 3 */}
         {/* CARD 3 */}
@@ -70,7 +77,7 @@ export default function AboutCards() {
       className="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div className="absolute inset-0 bg-white/35" />
+    <div className="absolute inset-0" />
 
     <div className="relative z-10 p-8 h-full flex flex-col justify-between">
       <div>
