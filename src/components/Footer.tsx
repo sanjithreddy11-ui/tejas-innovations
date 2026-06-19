@@ -44,21 +44,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/10 pt-20 pb-8 bg-black overflow-hidden">
-      {/* Background Glow */}
+<footer className="relative border-t border-white/10 pt-20 pb-8 bg-black overflow-hidden">      {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[500px] h-[200px] bg-[#B8F18D]/5 blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-16">
           {/* Brand */}
           <div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
               <span className="text-white">•</span> Tejas.
             </h3>
 
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+          <p className="text-zinc-400 text-sm leading-relaxed mb-4">
               Building premium digital experiences for businesses that want
               modern websites, automation, growth, and scale.
             </p>
@@ -94,11 +93,11 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-white font-semibold mb-5">
+           <h4 className="text-white font-semibold mb-3">
               Navigation
             </h4>
 
-            <ul className="space-y-3">
+           <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a

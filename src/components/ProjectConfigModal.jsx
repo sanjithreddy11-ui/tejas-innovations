@@ -121,7 +121,21 @@ export default function ProjectConfigModal({ isOpen, onClose }) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl glass-card border border-white/10 bg-graphite p-6 sm:p-8"
+           className="
+relative
+w-full
+max-w-2xl
+max-h-[90vh]
+overflow-y-auto
+rounded-2xl
+border border-blue-500/20
+bg-gradient-to-br
+from-slate-950
+via-slate-900
+to-slate-800
+shadow-[0_10px_40px_rgba(0,0,0,0.5)]
+p-6 sm:p-8
+"
           >
             <div className="flex items-start justify-between mb-6">
               <div className="flex items-center gap-3">
