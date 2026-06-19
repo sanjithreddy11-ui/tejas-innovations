@@ -20,52 +20,23 @@ answer:
 },
 {
 id: "03",
-question: "Can you build custom systems?",
-answer:
-"Absolutely. We build booking platforms, QR ordering systems, dashboards, customer portals, and custom business software.",
-},
-{
-id: "04",
-question: "What are your payment terms?",
-answer:
-"Projects usually begin with a 50% advance payment and the remaining balance is paid upon project completion.",
-},
-{
-id: "05",
-question: "Will my website work on mobile devices?",
-answer:
-"Every website we build is fully responsive and optimized for mobile phones, tablets, laptops, and desktops.",
-},
-{
-id: "06",
 question: "Do you offer SEO optimization?",
 answer:
 "Yes. We implement technical SEO best practices, performance optimization, metadata, and structured content.",
 },
 {
-id: "07",
+id: "04",
 question: "Can I update my website myself?",
 answer:
 "Yes. We can build websites with user-friendly content management systems that allow easy updates.",
 },
 {
-id: "08",
+id: "05",
 question: "Do you redesign existing websites?",
 answer:
 "Yes. We can modernize outdated websites with improved design, performance, responsiveness, and functionality.",
 },
-{
-id: "09",
-question: "Will my website be fast?",
-answer:
-"Performance is one of our priorities. We optimize assets, code, and hosting to ensure excellent loading speeds.",
-},
-{
-id: "10",
-question: "How do we get started?",
-answer:
-"Simply book a free consultation. We'll discuss your goals, requirements, timeline, and provide a tailored solution.",
-},
+
 ];
 
 export default function FAQSection() {
@@ -75,7 +46,7 @@ return ( <section
    id="faq"
    className="relative py-20 sm:py-15"
  > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <SectionLabel
-       number="03"
+       number="04"
        label="FAQ"
      />
     <motion.h2

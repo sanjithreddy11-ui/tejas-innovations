@@ -16,7 +16,7 @@ whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: index * 0.08 }}
 whileHover={{ y: -6 }}
-className="rounded-3xl border border-white/10 bg-[#0B0F14] p-6 backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+className="rounded-3xl border border-white/10 bg-zinc-800 p-6 backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
 > <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-5"> <Icon className="w-7 h-7 text-white" /> </div>
   <h3 className="text-xl font-semibold text-white mb-3">
     {service.title}

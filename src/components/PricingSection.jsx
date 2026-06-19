@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
+import SectionLabel from "./SectionLabel";
 
 const plans = [
   {
@@ -74,9 +75,10 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <span className="inline-flex items-center gap-2 text-[#B9FF66] text-sm uppercase tracking-[0.2em] mb-4">
-            ● Pricing
-          </span>
+          <SectionLabel
+                number="03"
+                label="Pricing"
+              />
 
           <h2 className="text-white text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
             Simple Pricing
