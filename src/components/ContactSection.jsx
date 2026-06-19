@@ -145,9 +145,9 @@ export default function ContactSection() {
                 <X size={24} />
               </button>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+              <h4 className="text-3xl md:text-4xl font-bold text-white text-center">
                 Let's Build Your Project
-              </h2>
+              </h4>
 
               <p className="mt-3 text-center text-zinc-400">
                 Tell us about your project and we'll get back to you shortly.

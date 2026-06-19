@@ -80,9 +80,9 @@ export default function PricingSection() {
                 label="Pricing"
               />
 
-          <h2 className="text-white text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
+          <h5 className="text-white text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
             Simple Pricing
-          </h2>
+          </h5>
 
           <p className="text-neutral-400 text-lg mt-5 max-w-2xl">
             Flexible pricing designed for startups, brands, and businesses

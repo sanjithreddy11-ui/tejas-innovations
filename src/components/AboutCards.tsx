@@ -59,9 +59,9 @@ export default function AboutCards() {
             <div className="absolute inset-0 bg-black/25" />
 
             <div className="absolute bottom-8 left-8 z-10">
-              <h2 className="text-white text-6xl font-semibold">
+              <h3 className="text-white text-6xl font-semibold">
                 98%
-              </h2>
+              </h3>
 
               <p className="text-white text-xl mt-2">
                 Client Satisfaction Rate

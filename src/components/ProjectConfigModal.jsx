@@ -143,9 +143,9 @@ p-6 sm:p-8
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-display font-bold text-xl sm:text-2xl text-foreground">
+                  <h6 className="font-display font-bold text-xl sm:text-2xl text-foreground">
                     Configure Your Project
-                  </h2>
+                  </h6>
                   <p className="text-steel text-sm">Tell us about your requirements</p>
                 </div>
               </div>
