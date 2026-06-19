@@ -62,7 +62,7 @@ export default function Hero() {
 
          <a
   href="#contact"
-  className="group inline-flex items-center gap-3 rounded-full bg-[#B8F18D] px-7 py-4 text-sm font-medium text-[#03060B] transition-all duration-300 hover:scale-105 hover:bg-[#C6F7A3]"
+  className="group inline-flex items-center gap-3 rounded-full bg-[#B8F18D] px-4 py-2 text-sm font-medium text-[#03060B] transition-all duration-300 hover:scale-105 hover:bg-[#C6F7A3]"
 >
   <span>Start Project</span>
 

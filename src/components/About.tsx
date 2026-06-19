@@ -26,8 +26,8 @@ className="pt-6 pb-15"
 
       {/* ABOUT LABEL */}
       <div className="lg:pt-6 lg:pl-16">
-        <p className="text-[18px] md:text-[22px] lg:text-[30px] text-neutral-400">
-          About Tejas
+        <p className="text-[18px] md:text-[22px] lg:text-[20px] text-neutral-400">
+          About Us
         </p>
       </div>
 
