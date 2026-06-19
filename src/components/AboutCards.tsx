@@ -41,18 +41,19 @@ export default function AboutCards() {
             transition={{ duration: 0.3 }}
             className="relative overflow-hidden rounded-[28px] min-h-[380px]"
           >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source
-                src="/videos/showreel.mp4"
-                type="video/mp4"
-              />
-            </video>
+          <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="none"
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source
+    src="/videos/showreel.mp4"
+    type="video/mp4"
+  />
+</video>
 
             <div className="absolute inset-0 bg-black/25" />
 
