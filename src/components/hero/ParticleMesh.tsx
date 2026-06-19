@@ -21,8 +21,8 @@ export function ParticleMesh() {
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     // Mesh resolution (cols across × rows deep). Tuned for perf + density.
-    const COLS = 50;
-    const ROWS = 50;
+    const COLS = 10;
+    const ROWS = 10;
 
     // Palette — illuminated cyan / teal
     const palette = [
