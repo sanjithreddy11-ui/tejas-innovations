@@ -74,7 +74,7 @@ export default function Hero() {
       </header>
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-10 pb-20 md:px-10 md:pt-20">
+     <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-10 pb-20 md:px-20 lg:px-32 md:pt-20">
         {/* Badge */}
         <Reveal>
           <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-sm">
@@ -127,12 +127,9 @@ export default function Hero() {
 
         {/* Logo Strip */}
         <Reveal delay={400}>
-          <div className="mt-20 flex flex-wrap gap-12 text-lg font-medium text-white/35">
-            <span>Logoipsum</span>
-            <span>Logoipsum</span>
-            <span>Logoipsum</span>
-            <span>Logoipsum</span>
-          </div>
+         <div className="mt-24 border-t border-white/10 pt-8">
+ 
+</div>
         </Reveal>
       </div>
     </section>
