@@ -30,7 +30,6 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionLabel number="01" label="About Us" />
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +37,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-4"
         >
-          Meet The <span className="gradient-text">Founders</span>
+          The Minds Behind <span className="gradient-text italic">Tejas</span>
         </motion.h2>
 
         <motion.p

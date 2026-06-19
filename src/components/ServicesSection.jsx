@@ -5,53 +5,65 @@ import SectionLabel from "./SectionLabel";
 import ServiceCarousel from "./ServiceCarousel";
 
 import {
-Globe,
-UtensilsCrossed,
-QrCode,
-CalendarCheck,
-Megaphone,
-Search,
-Wrench,
-Code2,
+  Code2,
+  Bot,
+  QrCode,
+  PhoneCall,
+  Workflow,
+  Search,
+  ShoppingCart,
+  MapPinned,
 } from "lucide-react";
 
 const services = [
-{
-icon: Globe,
-title: "Web Design & Development",
-description:
-"Designing and building high-performance websites that combine exceptional user experience with modern technology.",
-},
-{
-icon: UtensilsCrossed,
-title: "AI Solutions",
-description:
-"Custom AI-powered solutions that streamline operations and enhance customer experiences.",
-},
-{
-icon: QrCode,
-title: "QR Ordering Systems",
-description:
-"Customers scan QR codes, browse digital menus, place orders from their table, and make payments — all digitally.",
-},
-{
-icon: CalendarCheck,
-title: "AI Voice Agents",
-description:
-"Human-like AI calling systems that instantly engage, qualify, and nurture leads.",
-},
-{
-icon: Megaphone,
-title: "Business Automation",
-description:
-"Automating workflows, lead management, CRM processes, notifications, and operational tasks.",
-},
-{
-icon: Search,
-title: "SEO Optimization",
-description:
-"Improve your search engine visibility with on-page SEO, technical audits, and content optimization strategies.",
-},
+  {
+    icon: Code2,
+    title: "Web Design & Development",
+    description:
+      "Designing and building high-performance websites that combine exceptional user experience with modern technology.",
+  },
+  {
+    icon: Bot,
+    title: "AI Solutions",
+    description:
+      "Custom AI-powered solutions that streamline operations and enhance customer experiences.",
+  },
+  {
+    icon: QrCode,
+    title: "QR Ordering Systems",
+    description:
+      "Customers scan QR codes, browse digital menus, place orders from their table, and make payments — all digitally.",
+  },
+  {
+    icon: PhoneCall,
+    title: "AI Voice Agents",
+    description:
+      "Human-like AI calling systems that instantly engage, qualify, and nurture leads.",
+  },
+  {
+    icon: Workflow,
+    title: "Business Automation",
+    description:
+      "Automating workflows, lead management, CRM processes, notifications, and operational tasks.",
+  },
+  {
+    icon: Search,
+    title: "SEO Optimization",
+    description:
+      "Improve your search engine visibility with on-page SEO, technical audits, and content optimization strategies.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce Applications",
+    description:
+      "Custom online stores and e-commerce platforms with secure payments, inventory management, and seamless shopping experiences.",
+  },
+  {
+    icon: MapPinned,
+    title: "Google Business Profile Optimization",
+    description:
+      "Optimize your Google Business Profile to improve local visibility, attract nearby customers, and generate more calls and inquiries.",
+  },
 ];
 
 export default function ServicesSection({

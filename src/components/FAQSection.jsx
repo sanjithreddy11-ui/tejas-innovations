@@ -75,7 +75,7 @@ return ( <section
    id="faq"
    className="relative py-28 sm:py-32"
  > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <SectionLabel
-       number="04"
+       number="03"
        label="FAQ"
      />
     <motion.h2
