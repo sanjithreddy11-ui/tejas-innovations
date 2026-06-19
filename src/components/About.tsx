@@ -19,23 +19,23 @@ const words = paragraph.split(" ");
 return (
 <section
 id="about"
-className="pt-6 pb-15"
+className="pt-6 pb-8 lg:pb-16"
 >
 <div className="w-full px-7 sm:px-8 lg:px-24">
 <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-8 lg:gap-6">
 
       {/* ABOUT LABEL */}
-      <div className="lg:pt-6 lg:pl-16">
-        <p className="text-[18px] md:text-[22px] lg:text-[20px] text-neutral-400">
-          About Us
-        </p>
+    <div className="mb-4 lg:mb-0 lg:pt-6 lg:pl-16">
+      <p className="text-[18px] lg:text-[18px] font-medium text-neutral-400">
+  • About Us
+</p>
       </div>
 
       {/* CONTENT */}
-      <div
-        ref={containerRef}
-        className="w-full"
-      >
+     <div
+  ref={containerRef}
+  className="w-full max-w-[950px]"
+>
         <h2
           className="
             text-[24px]

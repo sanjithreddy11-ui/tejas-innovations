@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import About from "@/components/About";
+import AboutCards from "@/components/AboutCards";
 import HomeContent from "@/components/HomeContent";
 import FAQSection from "@/components/FAQSection";
 import  ContactSection  from "@/components/ContactSection";
@@ -10,7 +11,8 @@ export default function Home() {
     <>
       <Hero />
       <About/>
-      <HomeContent />
+      <AboutCards/>
+       <HomeContent />
       <FAQSection />
       <ContactSection/>
       <Footer />

@@ -27,16 +27,25 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-[#03060B] text-white overflow-x-hidden w-full">
+    <section className="relative min-h-screen overflow-hidden bg-[#03060B] text-white">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <ParticleMesh />
+
+        <div className="absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_20%,transparent_0%,rgba(3,6,11,0.55)_70%,#03060B_100%)]" />
+
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#03060B]" />
+      </div>
+
       {/* Navbar */}
       <header
-        className={` inset-x-0 top-0 z-50 transition-all duration-500 ${
+        className={`relative z-50 transition-all duration-500 ${
           scrolled
             ? "backdrop-blur-md bg-[#03060B]/40"
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1480px] items-center justify-between px-6 py-6 md:px-10 md:py-7">
+        <div className="mx-auto flex max-w-[1480px] items-center justify-between px-6 py-6 md:px-10">
           <a
             href="#"
             className="text-[25px] font-medium tracking-tight"
@@ -60,95 +69,71 @@ export default function Hero() {
             </ul>
           </nav>
 
-         <a
-  href="#contact"
-  className="group inline-flex items-center gap-3 rounded-full bg-[#B8F18D] px-4 py-2 text-sm font-medium text-[#03060B] transition-all duration-300 hover:scale-105 hover:bg-[#C6F7A3]"
->
-  <span>Start Project</span>
-
-  <span className="inline-block h-2 w-2 rounded-full bg-[#03060B] transition-transform duration-300 group-hover:scale-125" />
-</a>
+        
         </div>
       </header>
 
-      {/* Hero */}
-      <div className="relative min-h-screen">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <ParticleMesh />
+      {/* Hero Content */}
+      <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-10 pb-20 md:px-10 md:pt-20">
+        {/* Badge */}
+        <Reveal>
+          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-sm">
+            <span className="text-[#B8F18D]">
+              ★★★★★
+            </span>
 
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_20%,transparent_0%,rgba(3,6,11,0.55)_70%,#03060B_100%)]" />
-
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#03060B]" />
-        </div>
-
-        {/* Content */}
-       <div className="relative z-10 mx-auto flex max-w-[1480px] flex-col px-6 pt-6 md:px-10 md:pt-16">
-          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-<div className="hidden lg:block">
-  <Reveal>
-    <p className="pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
-      An independent digital agency designing brand, product,
-      and web for category leaders.
-    </p>
-  </Reveal>
-</div>
-
-            <Reveal delay={120}>
-  <p className="mt-30 md:mt-0 text-[12px] tracking-[0.22em] text-white/55">
-    EST. © 2026
-  </p>
-</Reveal>
+            <span className="text-sm text-white/75">
+              Trusted Digital Agency
+            </span>
           </div>
+        </Reveal>
 
-<div className="mt-8 md:mt-10 pb-12 md:pb-20 md:pl-40">         <Reveal>
-              <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/[0.03] px-4 py-2 backdrop-blur-sm">
-                <span className="text-[#B8F18D]">
-                  ★★★★★
-                </span>
+        {/* Heading */}
+        <Reveal delay={100}>
+          <h1 className="max-w-[1000px] text-[clamp(3.5rem,8vw,7.5rem)] font-bold leading-[0.92] tracking-[-0.05em]">
+            Building digital
+            <br />
+            experiences that
+            <br />
+            accelerate{" "}
+            <span className="italic text-[#B8F18D]">
+              growth
+            </span>
+            .
+          </h1>
+        </Reveal>
 
-                <span className="text-[12px] text-white/75">
-                  Trusted Digital Agency
-                </span>
-              </div>
-            </Reveal>
-
-            <Reveal delay={120}>
-             <h1 className="text-[clamp(3rem,7vw,7rem)] leading-[0.9] tracking-[-0.05em] font-bold">
-                Building digital
-                experiences 
-                 <br />
-                that
-                accelerate{" "}
-                <span className="italic font-bold text-[#B8F18D]">
-                  growth
-                </span>
-                .
-              </h1>
-            </Reveal>
-
-            <Reveal delay={260}>
-              <div className="mt-8 md:mt-12 flex flex-wrap items-end justify-between gap-6">
-                <p className="max-w-md text-[14px] leading-relaxed text-white/55">
-                  A senior studio of designers,
-                  engineers, and strategists
-                  shipping flagship work for
-                  funded startups and global
-                  brands.
-                </p>
-
-                <a
-                  href="#work"
-                  className="group inline-flex items-center gap-3 text-[13px] text-white/85 hover:text-white"
-                >
-                  <span className="inline-block h-px w-10 bg-white/40 transition-all group-hover:w-16 group-hover:bg-[#B8F18D]" />
-
-                 
-                </a>
-              </div>
-            </Reveal>
+        {/* Description */}
+        <Reveal delay={200}>
+          <div className="mt-8 max-w-xl">
+            <p className="text-base leading-relaxed text-white/60 md:text-lg">
+              A senior studio of designers,
+              engineers and strategists
+              shipping flagship work for
+              funded startups and global
+              brands.
+            </p>
           </div>
-        </div>
+        </Reveal>
+
+        {/* CTA */}
+        <Reveal delay={300}>
+          <div className="mt-10 flex flex-wrap gap-4">
+           
+
+            
+          </div>
+        </Reveal>
+
+        {/* Logo Strip */}
+        <Reveal delay={400}>
+          <div className="mt-20 flex flex-wrap gap-12 text-lg font-medium text-white/35">
+            <span>Logoipsum</span>
+            <span>Logoipsum</span>
+            <span>Logoipsum</span>
+            <span>Logoipsum</span>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
