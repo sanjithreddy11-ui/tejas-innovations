@@ -11,16 +11,7 @@ export default function ContactSection() {
     <>
       <section
         id="contact"
-        className="
-          relative
-          min-h-[850px]
-          md:min-h-screen
-          flex
-          items-center
-          justify-center
-          overflow-hidden
-          bg-black
-        "
+        className="relative h-[550px] md:h-[700px] overflow-hidden bg-black flex items-center justify-center"
       >
         {/* Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -31,12 +22,12 @@ export default function ContactSection() {
             className="
               hidden md:block
               absolute
-              inset-0
+              bottom-[-5%]
+              left-0
               w-full
               h-full
               object-cover
-              opacity-75
-              scale-110
+              opacity-70
             "
           />
 
@@ -48,51 +39,49 @@ export default function ContactSection() {
               md:hidden
               absolute
               bottom-[-8%]
-              left-[-40%]
-              w-[180%]
+              left-[-20%]
+              w-[140%]
               max-w-none
-              opacity-80
+              opacity-70
             "
           />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/35" />
+          <div className="absolute inset-0 bg-black/45" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
             className="
-              text-[64px]
-              md:text-3xl
+              text-[52px]
+              md:text-7xl
               lg:text-8xl
               font-bold
               text-white
-              leading-[0.9]
+              leading-[0.95]
               tracking-tight
             "
           >
-            Build
-            Something
-            <br/>
+            Build Something
+            <br />
             That Performs
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
             className="
-              mt-8
-              max-w-3xl
+              mt-5
+              max-w-2xl
               mx-auto
-              text-xl
-              md:text-2xl
+              text-base
+              md:text-xl
               text-zinc-300
               leading-relaxed
             "
@@ -102,32 +91,31 @@ export default function ContactSection() {
           </motion.p>
 
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.25 }}
             onClick={() => setIsOpen(true)}
             className="
-              mt-12
+              mt-8
               inline-flex
               items-center
-              gap-4
-              px-10
-              py-5
-              rounded-[28px]
+              gap-3
+              px-7
+              py-3
+              rounded-2xl
               bg-[#B8F18D]
               text-black
               font-semibold
-              text-xl
-              hover:bg-zinc-200
+              text-lg
               transition-all
-              cursor-pointer
+              hover:scale-[1.02]
             "
           >
             Let's Talk
 
-            <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
-              <ArrowRight size={22} />
+            <span className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">
+              <ArrowRight size={18} />
             </span>
           </motion.button>
         </div>
@@ -201,7 +189,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-2xl bg-[#B8F18D] py-4 font-semibold text-black transition hover:scale-[1.02]"
+                  className="w-full rounded-2xl bg-[#B8F18D] py-4 font-semibold text-black"
                 >
                   Send Message
                 </button>
