@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/components/ProjectConfigModal.jsx"  ],
+, "src/components/ProjectConfigModal.jsx", "src/components/PricingSection.jsx"  ],
   "exclude": ["node_modules"]
 }
