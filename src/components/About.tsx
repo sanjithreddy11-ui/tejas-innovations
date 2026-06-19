@@ -19,7 +19,7 @@ const words = paragraph.split(" ");
 return (
 <section
 id="about"
-className="pt-20 pb-24"
+className="pt-6 pb-15"
 >
 <div className="w-full px-7 sm:px-8 lg:px-24">
 <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-8 lg:gap-6">
