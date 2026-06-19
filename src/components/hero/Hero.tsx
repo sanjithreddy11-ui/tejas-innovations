@@ -85,19 +85,20 @@ export default function Hero() {
         {/* Content */}
        <div className="relative z-10 mx-auto flex max-w-[1480px] flex-col px-6 pt-6 md:px-10 md:pt-16">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-<Reveal>
-  <p className="hidden lg:block pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
-    An independent digital agency designing brand, product,
-    and web for category leaders.
-  </p>
-</Reveal>
+<div className="hidden lg:block">
+  <Reveal>
+    <p className="pb-6 md:pb-10 md:ml-40 max-w-md text-base md:text-lg leading-relaxed">
+      An independent digital agency designing brand, product,
+      and web for category leaders.
+    </p>
+  </Reveal>
+</div>
 
             <Reveal delay={120}>
-              <p className="text-[12px] tracking-[0.22em] text-white/55">
-                EST.{" "}
-                 © 2026
-              </p>
-            </Reveal>
+  <p className="mt-10 md:mt-0 text-[12px] tracking-[0.22em] text-white/55">
+    EST. © 2026
+  </p>
+</Reveal>
           </div>
 
 <div className="mt-8 md:mt-10 pb-12 md:pb-20 md:pl-40">         <Reveal>
