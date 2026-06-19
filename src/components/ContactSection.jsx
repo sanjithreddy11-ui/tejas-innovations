@@ -68,7 +68,7 @@ export default function ContactSection() {
             transition={{ duration: 0.7 }}
             className="
               text-[64px]
-              md:text-7xl
+              md:text-3xl
               lg:text-8xl
               font-bold
               text-white
@@ -77,9 +77,8 @@ export default function ContactSection() {
             "
           >
             Build
-            <br />
             Something
-            <br />
+            <br/>
             That Performs
           </motion.h2>
 
@@ -93,7 +92,7 @@ export default function ContactSection() {
               max-w-3xl
               mx-auto
               text-xl
-              md:text-xl
+              md:text-2xl
               text-zinc-300
               leading-relaxed
             "
