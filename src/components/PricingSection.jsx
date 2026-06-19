@@ -145,6 +145,7 @@ export default function PricingSection() {
 
                 {/* Button */}
                 <button
+                title="Next slide"
                   className={`w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-medium text-lg transition-all duration-300 hover:scale-[1.02] ${plan.buttonStyle}`}
                 >
                   Get Started

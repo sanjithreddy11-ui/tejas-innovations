@@ -150,6 +150,7 @@ p-6 sm:p-8
                 </div>
               </div>
               <button
+              title="Next slide"
                 onClick={handleClose}
                 className="p-2 rounded-lg text-steel hover:text-foreground hover:bg-white/5 transition-colors"
                 aria-label="Close"
@@ -167,6 +168,7 @@ p-6 sm:p-8
                   out to you at {formData.email || "your email"} within 24 hours.
                 </p>
                 <button
+                title="Next slide"
                   onClick={handleClose}
                   className="px-6 py-3 rounded-full bg-gradient-to-r from-amethyst to-amethyst/80 text-white text-sm font-medium hover:shadow-lg hover:shadow-amethyst/25 transition-all"
                 >
@@ -294,6 +296,7 @@ p-6 sm:p-8
                             const active = formData.services.includes(service.id);
                             return (
                               <button
+                              title="Next slide"
                                 key={service.id}
                                 onClick={() => toggleService(service.id)}
                                 className={`flex items-center gap-3 p-4 rounded-xl border text-left transition-all ${
@@ -352,6 +355,7 @@ p-6 sm:p-8
                           <div className="flex flex-wrap gap-2">
                             {timelineOptions.map((opt) => (
                               <button
+                              title="Next slide"
                                 key={opt}
                                 onClick={() => update("timeline", opt)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
@@ -378,6 +382,7 @@ p-6 sm:p-8
                         <div className="space-y-3">
                           {budgetOptions.map((opt) => (
                             <button
+                            title="Next slide"
                               key={opt.id}
                               onClick={() => update("budget", opt.label)}
                               className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all ${
@@ -472,6 +477,7 @@ p-6 sm:p-8
 
                 <div className="border-t border-white/10 pt-6 mt-6 flex items-center justify-between">
                   <button
+                  title="Next slide"
                     onClick={prevStep}
                     disabled={step === 0}
                     className="flex items-center gap-1 px-5 py-2.5 rounded-full text-sm font-medium text-steel hover:text-foreground hover:bg-white/5 transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
@@ -482,6 +488,7 @@ p-6 sm:p-8
 
                   {step < steps.length - 1 ? (
                     <button
+                    title="Next slide"
                       onClick={nextStep}
                       disabled={!isStepValid()}
                       className="flex items-center gap-1 px-6 py-2.5 rounded-full bg-gradient-to-r from-amethyst to-amethyst/80 text-white text-sm font-medium hover:shadow-lg hover:shadow-amethyst/25 transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:shadow-none"
@@ -491,6 +498,7 @@ p-6 sm:p-8
                     </button>
                   ) : (
                     <button
+                    title="Next slide"
                       onClick={handleSubmit}
                       className="flex items-center gap-1 px-6 py-2.5 rounded-full bg-gradient-to-r from-amethyst to-cyan text-white text-sm font-medium hover:shadow-lg hover:shadow-amethyst/25 transition-all"
                     >

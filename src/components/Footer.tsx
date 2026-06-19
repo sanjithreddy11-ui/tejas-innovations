@@ -68,6 +68,7 @@ export default function Footer() {
 
                 return (
                   <a
+                  aria-label="GitHub Profile"
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -101,6 +102,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
+                  aria-label="GitHub Profile"
                     href={link.href}
                     className="
                       text-zinc-400
@@ -152,6 +154,7 @@ export default function Footer() {
             </p>
 
             <a
+            aria-label="GitHub Profile"
               href="#contact"
               className="
                 inline-flex
@@ -179,6 +182,7 @@ export default function Footer() {
           </p>
 
           <button
+          title="Next slide"
             onClick={scrollToTop}
             className="
               w-11 h-11

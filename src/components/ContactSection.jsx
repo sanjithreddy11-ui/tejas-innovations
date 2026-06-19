@@ -138,6 +138,7 @@ export default function ContactSection() {
               className="relative w-full max-w-2xl rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
             >
               <button
+              title="Next slide"
                 onClick={() => setIsOpen(false)}
                 className="absolute right-5 top-5 text-zinc-400 hover:text-white"
               >
@@ -189,6 +190,7 @@ export default function ContactSection() {
                 />
 
                 <button
+                title="Next slide"
                   type="submit"
                   className="w-full rounded-2xl bg-[#B8F18D] py-4 font-semibold text-black"
                 >

@@ -27,6 +27,7 @@ className="rounded-3xl border border-white/10 bg-zinc-800 p-6 backdrop-blur-xl t
   </p>
 
   <button
+  title="Next slide"
     onClick={onConfigureClick}
     className="mt-auto w-full py-3 rounded-xl bg-white text-black font-medium hover:bg-zinc-200 transition-all duration-300"
   >

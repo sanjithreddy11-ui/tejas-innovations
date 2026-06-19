@@ -27,6 +27,7 @@ export default function AboutCards() {
             </div>
 
             <a
+            aria-label="GitHub Profile"
               href="#contact"
               className="w-fit flex items-center gap-3 bg-black text-white px-4 py-1 rounded-2xl text-lg transition-all duration-300 hover:bg-white hover:text-black"
             >

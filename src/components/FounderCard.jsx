@@ -91,6 +91,7 @@ backgroundColor: "#0B0F14",
 
       <div className="flex items-center gap-4">
         <a
+        aria-label="GitHub Profile"
           href={founder.portfolio}
           target="_blank"
           rel="noopener noreferrer"
@@ -100,6 +101,7 @@ backgroundColor: "#0B0F14",
         </a>
 
         <a
+        aria-label="GitHub Profile"
           href={founder.resume}
           target="_blank"
           rel="noopener noreferrer"
@@ -109,6 +111,7 @@ backgroundColor: "#0B0F14",
         </a>
 
         <a
+        aria-label="GitHub Profile"
           href={founder.github}
           target="_blank"
           rel="noopener noreferrer"
@@ -118,6 +121,7 @@ backgroundColor: "#0B0F14",
         </a>
 
         <a
+        aria-label="GitHub Profile"
           href={founder.linkedin}
           target="_blank"
           rel="noopener noreferrer"
