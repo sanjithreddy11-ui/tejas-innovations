@@ -11,43 +11,52 @@ export default function ContactSection() {
     <>
       <section
         id="contact"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+        className="
+          relative
+          min-h-[850px]
+          md:min-h-screen
+          flex
+          items-center
+          justify-center
+          overflow-hidden
+          bg-black
+        "
       >
         {/* Background */}
-        <div className="absolute inset-0">
         <div className="absolute inset-0 overflow-hidden">
-  {/* Desktop */}
-  <img
-    src="/hand-desktop.png"
-    alt=""
-    className="
-      hidden md:block
-      absolute
-      inset-0
-      w-full
-      h-full
-      object-cover
-      opacity-70
-    "
-  />
+          {/* Desktop */}
+          <img
+            src="/hand-desktop.png"
+            alt=""
+            className="
+              hidden md:block
+              absolute
+              inset-0
+              w-full
+              h-full
+              object-cover
+              opacity-75
+              scale-110
+            "
+          />
 
-  {/* Mobile */}
-  <img
-    src="/hand-mobile.png"
-    alt=""
-    className="
-      block md:hidden
-      absolute
-      inset-0
-      w-full
-      h-full
-      object-contain
-      opacity-70
-    "
-  />
-</div>
+          {/* Mobile */}
+          <img
+            src="/hand-mobile.png"
+            alt=""
+            className="
+              md:hidden
+              absolute
+              bottom-[-8%]
+              left-[-40%]
+              w-[180%]
+              max-w-none
+              opacity-80
+            "
+          />
 
-          <div className="absolute inset-0 bg-black/40" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/35" />
         </div>
 
         {/* Content */}
@@ -58,16 +67,18 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="
-              text-5xl
+              text-[64px]
               md:text-7xl
               lg:text-8xl
               font-bold
               text-white
-              leading-[0.95]
+              leading-[0.9]
               tracking-tight
             "
           >
-            Build Something
+            Build
+            <br />
+            Something
             <br />
             That Performs
           </motion.h2>
@@ -81,7 +92,7 @@ export default function ContactSection() {
               mt-8
               max-w-3xl
               mx-auto
-              text-lg
+              text-xl
               md:text-xl
               text-zinc-300
               leading-relaxed
@@ -98,16 +109,17 @@ export default function ContactSection() {
             transition={{ delay: 0.3 }}
             onClick={() => setIsOpen(true)}
             className="
-              mt-10
+              mt-12
               inline-flex
               items-center
-              gap-3
-              px-8
-              py-4
-              rounded-2xl
+              gap-4
+              px-10
+              py-5
+              rounded-[28px]
               bg-[#B8F18D]
               text-black
               font-semibold
+              text-xl
               hover:bg-zinc-200
               transition-all
               cursor-pointer
@@ -115,8 +127,8 @@ export default function ContactSection() {
           >
             Let's Talk
 
-            <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">
-              <ArrowRight size={16} />
+            <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+              <ArrowRight size={22} />
             </span>
           </motion.button>
         </div>
