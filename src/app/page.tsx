@@ -2,6 +2,7 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/About";
 import AboutCards from "@/components/AboutCards";
 import HomeContent from "@/components/HomeContent";
+import BlogSection from "@/components/BlogSection";
 import dynamic from "next/dynamic";
 
 const PricingSection = dynamic(
@@ -26,6 +27,7 @@ export default function Home() {
       <About/>
       <AboutCards/>
        <HomeContent />
+       <BlogSection/>
        <PricingSection/>
       <FAQSection />
       <ContactSection/>
