@@ -2,10 +2,22 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/About";
 import AboutCards from "@/components/AboutCards";
 import HomeContent from "@/components/HomeContent";
-import PricingSection from "@/components/PricingSection"
-import FAQSection from "@/components/FAQSection";
-import  ContactSection  from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const PricingSection = dynamic(
+  () => import("@/components/PricingSection")
+);
+
+const FAQSection = dynamic(
+  () => import("@/components/FAQSection")
+);
+
+const ContactSection = dynamic(
+  () => import("@/components/ContactSection")
+);
+const Footer = dynamic(
+  () => import("@/components/Footer")
+);
 
 export default function Home() {
   return (

@@ -33,13 +33,13 @@ export default function Hero() {
           </div>
 
           <nav className="hidden md:flex items-center gap-10 text-white/70">
-            <a href="#about" aria-label="GitHub Profile">About</a>
-            <a href="#services" aria-label="GitHub Profile">Services</a>
-            <a href="#pricing" aria-label="GitHub Profile">Pricing</a>
-            <a href="#contact" aria-label="GitHub Profile">Contact</a>
+           <a href="#about" aria-label="About Tejas Agency">About</a>
+<a href="#services" aria-label="Our Services">Services</a>
+<a href="#pricing" aria-label="Pricing Plans">Pricing</a>
+<a href="#contact" aria-label="Contact Tejas Agency">Contact</a>
           </nav>
 
-          <button title="Next slide" className="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105">
+          <button title="Contact Tejas Agency" className="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105">
             Contact Now
           </button>
         </div>

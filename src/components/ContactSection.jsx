@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
 
@@ -16,36 +17,51 @@ export default function ContactSection() {
         {/* Background */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Desktop */}
-          <img
-            src="/hand-desktop.webp
-            "
-            alt=""
-            className="
-              hidden md:block
-              absolute
-              bottom-[-5%]
-              left-0
-              w-full
-              h-full
-              object-cover
-              opacity-70
-            "
-          />
 
-          {/* Mobile */}
-          <img
-            src="/hand-mobile.webp"
-            alt=""
-            className="
-              md:hidden
-              absolute
-              bottom-[-8%]
-              left-[-20%]
-              w-[140%]
-              max-w-none
-              opacity-70
-            "
-          />
+{/* Desktop */}
+<div
+  className="
+    hidden md:block
+    absolute
+    bottom-[-5%]
+    left-0
+    w-full
+    h-full
+  "
+>
+  <Image
+    src="/hand-desktop.webp"
+    alt="Digital particle hand illustration"
+    fill
+    sizes="100vw"
+    quality={75}
+    loading="lazy"
+    className="object-cover opacity-70"
+  />
+</div>
+
+{/* Mobile */}
+<div
+  className="
+    md:hidden
+    absolute
+    bottom-[-8%]
+    left-[-20%]
+    w-[140%]
+    h-full
+    max-w-none
+  "
+>
+  <Image
+    src="/hand-desktop.webp"
+    alt="Digital particle hand illustration"
+    fill
+    sizes="100vw"
+    quality={70}
+    loading="lazy"
+    className="object-contain opacity-70"
+  />
+</div>
 
           <div className="absolute inset-0 bg-black/45" />
         </div>
