@@ -46,6 +46,12 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA */}
+          <Link
+            href="/contact"
+            className="hidden md:block rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105"
+          >
+            Contact Now
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -71,14 +77,6 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="mt-3 rounded-2xl bg-white px-6 py-3 text-center font-medium text-black"
-              >
-                Contact Now
-              </Link>
             </nav>
           </div>
         )}

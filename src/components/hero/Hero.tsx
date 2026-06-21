@@ -41,7 +41,7 @@ export default function Hero() {
           </span>
 
           <span className="text-white/80">
-            Trusted Digital Agency
+            Trusted Digital Innovations
           </span>
 
           <ArrowRight size={16} />

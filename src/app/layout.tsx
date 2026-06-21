@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Tejas Agency | Web Development & SEO Services",
-    template: "%s | Tejas Agency",
+    default: "Tejas Innovations | Web Development & SEO Services",
+    template: "%s | Tejas Innovations",
   },
 
   description:
