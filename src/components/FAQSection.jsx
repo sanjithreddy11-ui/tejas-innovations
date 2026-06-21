@@ -97,7 +97,7 @@ return ( <section
             transition={{
               delay: index * 0.04,
             }}
-            className="rounded-3xl border border-white/10 bg-[#0B0F14] backdrop-blur-xl overflow-hidden hover:border-white/15 transition-all duration-300"
+            className="bg-zinc-800 rounded-3xl border border-white/10 bg-[#0B0F14] backdrop-blur-xl overflow-hidden hover:border-white/15 transition-all duration-300"
           >
             <button
             title="Next slide"

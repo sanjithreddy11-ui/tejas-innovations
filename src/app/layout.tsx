@@ -11,9 +11,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tejasagency.vercel.app"),
+  metadataBase: new URL("https://tejasinnovation.in"),
+  icons: {
+    icon: "/logo.png",
+  },
 
   title: {
     default: "Tejas Agency | Web Development & SEO Services",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     "Website Design",
     "Business Websites",
     "Portfolio Websites",
-    "Tejas Agency",
+    "Tejas Innovations",
   ],
 
   authors: [{ name: "Tejas Agency" }],
