@@ -12,7 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tejasinnovations.in"),
+  metadataBase: new URL("https://tejasinnovations.in"),
+  
+  alternates: {
+    canonical: "https://tejasinnovations.in",
+  },
+
   icons: {
     icon: "/logo.png",
   },
@@ -40,12 +45,22 @@ export const metadata: Metadata = {
   authors: [{ name: "Tejas Innovations" }],
 
   openGraph: {
-  title: "Tejas Innovations | Web Development & SEO Services",
-  description:
-    "Tejas Innovations helps businesses grow with modern websites, SEO optimization, branding, and digital solutions.",
-  url: "https://www.tejasinnovations.in",
-  siteName: "Tejas Innovations",
-},
+    title: "Tejas Innovations | Web Development & SEO Services",
+    description:
+      "Tejas Innovations helps businesses grow with modern websites, SEO optimization, branding, and digital solutions.",
+    url: "https://tejasinnovations.in",
+    siteName: "Tejas Innovations",
+    images: [
+      {
+        url: "https://tejasinnovations.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tejas Innovations",
+      },
+    ],
+    type: "website",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -61,8 +76,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Tejas Innovations",
-    url: "https://www.tejasinnovations.in",
-    logo: "https://www.tejasinnovations.in/logo.png",
+    url: "https://tejasinnovations.in",
+    logo: "https://tejasinnovations.in/logo.png",
     description:
       "Web development, SEO, branding and digital solutions for businesses.",
   };
