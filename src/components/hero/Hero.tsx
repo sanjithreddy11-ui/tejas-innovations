@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link"
 import {
   ArrowRight,
   Play,
@@ -8,7 +9,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050709] text-white">
+    <section className="relative min-h-screen overflow-hidden bg-[#050709] text-white mt-15">
       {/* Background Grid */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:120px_120px]" />
@@ -108,15 +109,11 @@ text-[clamp(3.5rem,6vw,6.5rem)]
           }}
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
-          <button className="flex items-center gap-3 rounded-2xl bg-[#a2fa8e] px-8 py-4 font-semibold text-black">
-            Get Started
-            <ArrowRight size={18} />
-          </button>
-
-          <button className="flex items-center gap-3 rounded-2xl bg-white/10 px-8 py-4 font-semibold">
-            <Play size={18} />
-            Watch Demo
-          </button>
+          <Link
+  href="/contact"
+  className="flex items-center gap-3 rounded-2xl bg-[#a2fa8e] px-8 py-4 font-semibold text-black">
+  Get Started
+</Link>
         </motion.div>
 
         {/* Floating Cards */}
