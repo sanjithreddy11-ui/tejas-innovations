@@ -1,0 +1,83 @@
+import React from "react";
+import ScrollReveal from "./ScrollReveal";
+import { Globe, LayoutDashboard, MousePointerClick, Code2 } from "lucide-react";
+
+const services = [
+  {
+    icon: Globe,
+    title: "AI Receptionists",
+    description:
+      "24/7 virtual receptionists that answer calls, route inquiries,capture customer information, and ensure no opportunity is missed.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Lead Qualification Agents",
+    description:
+      "AI voice systems that engage prospects, ask qualifying questions,score leads, and pass high-intent customers directly to your team.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Appointment Booking Agents",
+    description:
+      "Automated voice assistants that schedule, reschedule, and confirm appointments while syncing with your existing calendar systems.",
+  },
+  {
+    icon: Code2,
+    title: "Customer Support Agents",
+    description:
+      "Voice agents capable of answering FAQs, handling support requests,and providing instant assistance without human intervention."
+  },
+];
+
+export default function ServiceCards({ onConfigureClick }) {
+  return (
+    <section className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-5 mb-16">
+            <span className="shrink-0 text-[11px] font-mono tracking-[0.22em] uppercase text-[#A2FA8E]">
+              What We Build
+            </span>
+            <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.map((svc, i) => (
+            <ScrollReveal key={svc.title} delay={i * 0.1}>
+              <Card svc={svc} index={i} />
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Card({ svc, index }) {
+  const Icon = svc.icon;
+  return (
+    <div className="group relative h-full p-8 rounded-2xl border border-white/[0.07] bg-white/[0.025] hover:border-[#A2FA8E]/20 hover:bg-white/[0.045] transition-all duration-500 overflow-hidden">
+      {/* Hover glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(162,250,142,0.06) 0%, transparent 70%)" }} />
+
+      {/* Ghost number */}
+      <span className="absolute top-4 right-5 text-[5.5rem] font-black text-white/[0.025] leading-none select-none font-heading">
+        0{index + 1}
+      </span>
+
+      {/* Icon */}
+      <div className="relative z-10 mb-7 w-11 h-11 rounded-xl bg-[#A2FA8E]/[0.08] flex items-center justify-center group-hover:bg-[#A2FA8E]/[0.14] transition-all duration-500">
+        <Icon className="w-5 h-5 text-[#A2FA8E]" strokeWidth={1.5} />
+      </div>
+
+      <h3 className="relative z-10 font-heading text-base font-semibold text-white mb-3 leading-snug">
+        {svc.title}
+      </h3>
+      <p className="relative z-10 text-white/45 text-sm leading-relaxed font-light">
+        {svc.description}
+      </p>
+    </div>
+  );
+}

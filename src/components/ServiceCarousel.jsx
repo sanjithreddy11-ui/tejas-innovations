@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -144,20 +144,18 @@ border-white/15
                 {service.description}
               </p>
 
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onConfigureClick?.();
-                }}
-                className="mt-8 bg-white text-black px-6 py-4 rounded-2xl font-medium flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all"
-              >
-                Configure Project
+             <Link
+  href={service.href}
+  onClick={(e) => e.stopPropagation()}
+  className="mt-8 bg-white text-black px-6 py-4 rounded-2xl font-medium flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all"
+>
+  View Service Details
 
-                <ArrowRight
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </button>
+  <ArrowRight
+    size={18}
+    className="transition-transform group-hover:translate-x-1"
+  />
+</Link>
             </motion.div>
           );
         })}

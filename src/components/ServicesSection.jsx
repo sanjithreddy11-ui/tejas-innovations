@@ -21,48 +21,56 @@ const services = [
     title: "Web Design & Development",
     description:
       "Designing and building high-performance websites that combine exceptional user experience with modern technology.",
+    href: "/services/web-development",
   },
   {
     icon: Bot,
     title: "AI Solutions",
     description:
       "Custom AI-powered solutions that streamline operations and enhance customer experiences.",
+    href: "/services/ai-voice-agents",
   },
   {
     icon: QrCode,
     title: "QR Ordering Systems",
     description:
       "Customers scan QR codes, browse digital menus, place orders from their table, and make payments — all digitally.",
+    href: "/services/qr-ordering-system",
   },
   {
     icon: PhoneCall,
     title: "AI Voice Agents",
     description:
       "Human-like AI calling systems that instantly engage, qualify, and nurture leads.",
+    href: "/services/ai-voice-agents",
   },
   {
     icon: Workflow,
     title: "Business Automation",
     description:
       "Automating workflows, lead management, CRM processes, notifications, and operational tasks.",
+    href: "/services/business-automation",
   },
   {
     icon: Search,
     title: "SEO Optimization",
     description:
       "Improve your search engine visibility with on-page SEO, technical audits, and content optimization strategies.",
+    href: "/services/seo-optimization",
   },
   {
     icon: ShoppingCart,
     title: "E-Commerce Applications",
     description:
       "Custom online stores and e-commerce platforms with secure payments, inventory management, and seamless shopping experiences.",
+    href: "/services/e-commerce-applications",
   },
   {
     icon: MapPinned,
     title: "Google Business Profile Optimization",
     description:
       "Optimize your Google Business Profile to improve local visibility, attract nearby customers, and generate more calls and inquiries.",
+    href: "/services/google-profile-business-optimization",
   },
 ];
 

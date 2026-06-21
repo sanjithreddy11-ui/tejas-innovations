@@ -23,27 +23,6 @@ export default function Hero() {
       </div>
 
       {/* Navbar */}
-      <header className="relative z-50 pt-6">
-        <div className="mx-auto flex max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-4 backdrop-blur-xl">
-          <div className="flex items-center gap-3">
-            <div className="h-3 w-3 bg-[#a2fa8e]" />
-            <span className="text-3xl font-semibold">
-              Tejas
-            </span>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-10 text-white/70">
-           <a href="#about" aria-label="About Tejas Agency">About</a>
-<a href="#services" aria-label="Our Services">Services</a>
-<a href="#pricing" aria-label="Pricing Plans">Pricing</a>
-<a href="#contact" aria-label="Contact Tejas Agency">Contact</a>
-          </nav>
-
-          <button title="Contact Tejas Agency" className="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105">
-            Contact Now
-          </button>
-        </div>
-      </header>
 
       {/* Hero */}
       <div className="relative z-20 mx-auto flex max-w-7xl flex-col items-center px-6 pt-24 text-center">

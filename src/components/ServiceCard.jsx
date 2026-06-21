@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ServiceCard({
 service,
@@ -31,7 +32,7 @@ className="rounded-3xl border border-white/10 bg-zinc-800 p-6 backdrop-blur-xl t
     onClick={onConfigureClick}
     className="mt-auto w-full py-3 rounded-xl bg-white text-black font-medium hover:bg-zinc-200 transition-all duration-300"
   >
-    Configure Project
+    Configure 
   </button>
 </motion.div>
 );

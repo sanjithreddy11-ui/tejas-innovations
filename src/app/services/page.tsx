@@ -1,16 +1,15 @@
 import Navbar from "@/components/navbar/Navbar";
-import Hero from "@/components/hero/Hero";
 import HomeContent from "@/components/HomeContent";
-import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
-
-export default function Home() {
+export const metadata = {
+  title: "Services | Tejas",
+  description: "Learn about Tejas and our web development services.",
+};
+export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <Hero />
       <HomeContent />
-      <BlogSection />
       <Footer />
     </>
   );
