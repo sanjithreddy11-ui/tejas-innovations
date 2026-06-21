@@ -31,7 +31,7 @@ export default function PostSidebar({ sections }: { sections: BlogSection[] }) {
       {/* CTA card — gray-800 block, green kept as the accent */}
       <div className="rounded-2xl bg-zinc-800 p-6">
         <p className="text-sm font-bold uppercase tracking-wide text-[#a2fa8e]">
-          Tejas Agency
+          Tejas Innovations
         </p>
         <h3 className="mt-2 text-lg font-extrabold leading-snug text-[#F4F7F3]">
           Get a fixed-price website quote in 24 hours

@@ -127,7 +127,7 @@ export default function HeroSection() {
               </div>
               <img
                 src={heroImage}
-                alt="Modern SaaS dashboard by Tejas Agency"
+                alt="Modern SaaS dashboard by Tejas Innovations"
                 className="w-full block"
               />
             </div>

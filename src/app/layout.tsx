@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Tejas Innovations",
   ],
 
-  authors: [{ name: "Tejas Agency" }],
+  authors: [{ name: "Tejas Innovations" }],
 
   openGraph: {
   title: "Tejas Innovations | Web Development & SEO Services",
@@ -45,10 +45,7 @@ export const metadata: Metadata = {
     "Tejas Innovations helps businesses grow with modern websites, SEO optimization, branding, and digital solutions.",
   url: "https://www.tejasinnovations.in",
   siteName: "Tejas Innovations",
-  locale: "en_US",
-  type: "website",
 },
-
   robots: {
     index: true,
     follow: true,

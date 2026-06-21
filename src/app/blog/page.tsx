@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-24">
-      <h1 className="text-5xl font-bold mb-12">
-        Blog
+    <div className="max-w-7xl mx-auto px-6 py-24 text-">
+      <h1 className="text-5xl font-bold mb-12 text-green">
+        Latest Insights
       </h1>
 
       <div className="grid md:grid-cols-3 gap-6">

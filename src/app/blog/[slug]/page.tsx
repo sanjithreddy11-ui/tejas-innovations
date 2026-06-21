@@ -4,7 +4,7 @@ import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
 import ReadingProgress from "@/components/blog/ReadingProgress";
 import ShareBar from "@/components/blog/ShareBar";
 import PostSidebar from "@/components/blog/PostSidebar";
-import CostHeroIllustration from "@/components/blog/CostHeroIllustration";
+import Image from "next/image"
 import StickyLayout from "@/components/blog/StickyLayout";
 
 const display = Bricolage_Grotesque({
@@ -62,16 +62,12 @@ export default async function BlogPost({
         </span>
 
         {/* Title with marker-style highlight on a key phrase */}
-        <h1
-          className="mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          How Much Does a Website{" "}
-         
-            Cost
-         
-          in India in 2026?
-        </h1>
+       <h1
+  className="mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl"
+  style={{ fontFamily: "var(--font-display)" }}
+>
+  {blog.title}
+</h1>
 
         {/* Meta + author */}
         <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -93,9 +89,16 @@ export default async function BlogPost({
         </div>
 
         {/* Hero illustration */}
-        <div className="mt-10">
-          <CostHeroIllustration />
-        </div>
+        <div className="mt-10 overflow-hidden rounded-3xl border border-zinc-800">
+  <Image
+    src={blog.image}
+    alt={blog.title}
+    width={1600}
+    height={900}
+    className="w-full h-auto object-cover"
+    priority
+  />
+</div>
 
         {/* Intro / description */}
         <p className="mt-10 max-w-3xl text-lg leading-8 text-[#8B978E] sm:text-xl">
@@ -106,56 +109,65 @@ export default async function BlogPost({
         <div className="mt-14">
           <StickyLayout sidebar={<PostSidebar sections={blog.sections} />}>
             {/* Quick cost reference table */}
-            <div className="mb-16 overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-800">
-              <div className="border-b border-zinc-700 bg-zinc-800 px-6 py-4">
-                <h2
-                  className="text-base font-bold text-[#F4F7F3]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Quick cost reference
-                </h2>
-                <p className="mt-1 text-sm text-[#8B978E]">
-                  Typical 2026 price ranges for Indian businesses. Details below.
-                </p>
-              </div>
-              <table className="w-full text-sm">
-                <tbody>
-                  {costSnapshot.map((row, i) => (
-                    <tr
-                      key={row.item}
-                      className={i % 2 === 0 ? "bg-zinc-800" : "bg-zinc-900/60"}
-                    >
-                      <td className="px-6 py-3 font-medium text-[#C7D0C9]">{row.item}</td>
-                      <td className="px-6 py-3 text-right font-bold text-white">
-                        {row.range}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+           {blog.slug === "website-cost-india-2026" && (
+  <div className="mb-16 overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-800">
+    <div className="border-b border-zinc-700 bg-zinc-800 px-6 py-4">
+      <h2
+        className="text-base font-bold text-[#F4F7F3]"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
+        Quick cost reference
+      </h2>
+      <p className="mt-1 text-sm text-[#8B978E]">
+        Typical 2026 price ranges for Indian businesses. Details below.
+      </p>
+    </div>
 
-            <div className="space-y-16">
-              {blog.sections.map((section) => (
-                <section id={`section-${section.id}`} key={section.id} className="scroll-mt-24">
-                  <h2
-                    className="mb-5 text-2xl font-extrabold leading-tight sm:text-3xl"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    {section.heading}
-                  </h2>
-                  {section.content.split("\n\n").map((para, i) => (
-                    <p
-                      key={i}
-                      className="mb-5 text-base leading-7 text-[#C7D0C9] sm:text-[17px] sm:leading-8"
-                    >
-                      {para}
-                    </p>
-                  ))}
-                </section>
-              ))}
-            </div>
+    <table className="w-full text-sm">
+      <tbody>
+        {costSnapshot.map((row, i) => (
+          <tr
+            key={row.item}
+            className={i % 2 === 0 ? "bg-zinc-800" : "bg-zinc-900/60"}
+          >
+            <td className="px-6 py-3 font-medium text-[#C7D0C9]">
+              {row.item}
+            </td>
+            <td className="px-6 py-3 text-right font-bold text-white">
+              {row.range}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
 
+<div className="space-y-16">
+  {blog.sections.map((section) => (
+    <section
+      id={`section-${section.id}`}
+      key={section.id}
+      className="scroll-mt-24"
+    >
+      <h2
+        className="mb-5 text-2xl font-extrabold leading-tight sm:text-3xl"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
+        {section.heading}
+      </h2>
+
+      {section.content.split("\n\n").map((para, i) => (
+        <p
+          key={i}
+          className="mb-5 text-base leading-7 text-[#C7D0C9] sm:text-[17px] sm:leading-8"
+        >
+          {para}
+        </p>
+      ))}
+    </section>
+  ))}
+</div>
             {/* FAQs */}
             {blog.faqs && blog.faqs.length > 0 && (
               <section className="mt-20">
