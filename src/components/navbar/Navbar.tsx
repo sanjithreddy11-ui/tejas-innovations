@@ -46,12 +46,6 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="hidden md:block rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:scale-105"
-          >
-            Contact Now
-          </Link>
 
           {/* Mobile Menu Button */}
           <button
