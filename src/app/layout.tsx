@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tejasinnovations.in"),
+  metadataBase: new URL("https://www.tejasinnovations.in"),
   icons: {
     icon: "/logo.png",
   },
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Tejas Agency" }],
 
   openGraph: {
-    title: "Tejas Agency | Web Development & SEO Services",
-    description:
-      "Modern websites, SEO optimization, branding, and digital solutions for businesses.",
-    url: "https://tejasagency.vercel.app",
-    siteName: "Tejas Agency",
-    locale: "en_US",
-    type: "website",
-  },
+  title: "Tejas Innovations | Web Development & SEO Services",
+  description:
+    "Tejas Innovations helps businesses grow with modern websites, SEO optimization, branding, and digital solutions.",
+  url: "https://www.tejasinnovations.in",
+  siteName: "Tejas Innovations",
+  locale: "en_US",
+  type: "website",
+},
 
   robots: {
     index: true,
@@ -60,15 +60,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Tejas Innovations",
+    url: "https://www.tejasinnovations.in",
+    logo: "https://www.tejasinnovations.in/logo.png",
+    description:
+      "Web development, SEO, branding and digital solutions for businesses.",
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      
       <body className="min-h-full flex flex-col">
         {children}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </body>
+
       <GoogleAnalytics gaId="G-V13YD6PF3K" />
     </html>
   );
