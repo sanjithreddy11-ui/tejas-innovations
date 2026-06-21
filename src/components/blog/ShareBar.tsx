@@ -5,8 +5,7 @@ import { useState } from "react";
 export default function ShareBar({ title }: { title: string }) {
   const [copied, setCopied] = useState(false);
 
-  const url =
-    typeof window !== "undefined" ? window.location.href : "";
+  const url = typeof window !== "undefined" ? window.location.href : "";
 
   const handleCopy = async () => {
     try {
@@ -52,7 +51,7 @@ export default function ShareBar({ title }: { title: string }) {
         onClick={handleCopy}
         aria-label="Copy link"
         title={copied ? "Link copied" : "Copy link"}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 text-neutral-600 transition hover:border-neutral-900 hover:text-neutral-900"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2A332D] bg-[#161D19] text-[#8B978E] transition hover:border-[#a2fa8e] hover:text-[#a2fa8e]"
       >
         {copied ? (
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -79,7 +78,7 @@ export default function ShareBar({ title }: { title: string }) {
           rel="noopener noreferrer"
           aria-label={s.label}
           title={s.label}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 text-neutral-600 transition hover:border-neutral-900 hover:text-neutral-900"
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2A332D] bg-[#161D19] text-[#8B978E] transition hover:border-[#a2fa8e] hover:text-[#a2fa8e]"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             {s.icon}

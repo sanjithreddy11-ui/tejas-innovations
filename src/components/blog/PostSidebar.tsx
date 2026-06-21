@@ -28,31 +28,31 @@ export default function PostSidebar({ sections }: { sections: BlogSection[] }) {
 
   return (
     <aside className="space-y-6">
-      {/* CTA card */}
-      <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
-        <p className="text-sm font-semibold uppercase tracking-wide text-orange-700">
+      {/* CTA card — gray-800 block, green kept as the accent */}
+      <div className="rounded-2xl bg-zinc-800 p-6">
+        <p className="text-sm font-bold uppercase tracking-wide text-[#a2fa8e]">
           Tejas Agency
         </p>
-        <h3 className="mt-2 text-lg font-bold text-neutral-900">
+        <h3 className="mt-2 text-lg font-extrabold leading-snug text-[#F4F7F3]">
           Get a fixed-price website quote in 24 hours
         </h3>
-        <p className="mt-2 text-sm text-neutral-600">
+        <p className="mt-2 text-sm text-gray-400">
           No vague estimates. Tell us what you need, get a clear number back.
         </p>
         <a
           href="/#contact"
-          className="mt-4 inline-flex items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-600"
+          className="mt-4 inline-flex items-center justify-center rounded-full bg-[#a2fa8e] px-5 py-2.5 text-sm font-semibold text-[#0E1310] transition hover:bg-[#bdfcac]"
         >
           Get my quote
         </a>
       </div>
 
       {/* Table of contents */}
-      <nav className="rounded-2xl border border-neutral-200 bg-white p-6">
-        <p className="mb-4 text-sm font-bold uppercase tracking-wide text-neutral-900">
+      <nav className="rounded-2xl border border-[#2A332D] bg-zinc-800 p-6">
+        <p className="mb-4 text-sm font-bold uppercase tracking-wide text-[#F4F7F3]">
           In this article
         </p>
-        <ul className="space-y-1 border-l border-neutral-200">
+        <ul className="space-y-1 border-l border-[#2A332D]">
           {sections.map((section) => {
             const isActive = activeId === section.id;
             return (
@@ -61,8 +61,8 @@ export default function PostSidebar({ sections }: { sections: BlogSection[] }) {
                   href={`#section-${section.id}`}
                   className={`block border-l-2 py-1.5 pl-4 -ml-px text-sm transition ${
                     isActive
-                      ? "border-orange-600 font-semibold text-neutral-900"
-                      : "border-transparent text-neutral-500 hover:text-neutral-900"
+                      ? "border-[#a2fa8e] font-semibold text-[#a2fa8e]"
+                      : "border-transparent text-[#8B978E] hover:text-[#F4F7F3]"
                   }`}
                 >
                   {section.heading}

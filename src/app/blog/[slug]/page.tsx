@@ -1,13 +1,22 @@
 import { blogs } from "@/lib/blogData";
 import { notFound } from "next/navigation";
-import { Sora, Inter } from "next/font/google";
+import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
 import ReadingProgress from "@/components/blog/ReadingProgress";
 import ShareBar from "@/components/blog/ShareBar";
 import PostSidebar from "@/components/blog/PostSidebar";
 import CostHeroIllustration from "@/components/blog/CostHeroIllustration";
+import StickyLayout from "@/components/blog/StickyLayout";
 
-const sora = Sora({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-sora" });
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter" });
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
+});
+const body = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+});
 
 const costSnapshot = [
   { item: "Domain name", range: "₹500 – ₹1,500 / year" },
@@ -40,35 +49,42 @@ export default async function BlogPost({
     .toUpperCase();
 
   return (
-    <div className={`${sora.variable} ${inter.variable} min-h-screen bg-white text-neutral-900`} style={{ fontFamily: "var(--font-inter)" }}>
+    <div
+      className={`${display.variable} ${body.variable} min-h-screen bg-black text-[#F4F7F3]`}
+      style={{ fontFamily: "var(--font-body)" }}
+    >
       <ReadingProgress />
 
       <article className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-        {/* Category badge */}
-        <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-700">
+        {/* Category badge — solid filled pill */}
+        <span className="inline-flex items-center rounded-full bg-[#a2fa8e] px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide text-[#0E1310]">
           {blog.category}
         </span>
 
-        {/* Title */}
+        {/* Title with marker-style highlight on a key phrase */}
         <h1
-          className="mt-5 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl"
-          style={{ fontFamily: "var(--font-sora)" }}
+          className="mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl"
+          style={{ fontFamily: "var(--font-display)" }}
         >
-          {blog.title}
+          How Much Does a Website{" "}
+         
+            Cost
+         
+          in India in 2026?
         </h1>
 
         {/* Meta + author */}
-        <div className="mt-6 flex flex-wrap items-center gap-4">
+        <div className="mt-7 flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900 text-xs font-semibold text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#a2fa8e] text-xs font-bold text-[#0E1310]">
               {initials}
             </div>
-            <span className="text-sm font-medium text-neutral-900">{blog.author}</span>
+            <span className="text-sm font-medium text-[#F4F7F3]">{blog.author}</span>
           </div>
-          <span className="text-neutral-300">•</span>
-          <span className="text-sm text-neutral-500">{blog.date}</span>
-          <span className="text-neutral-300">•</span>
-          <span className="text-sm text-neutral-500">{blog.readTime}</span>
+          <span className="text-[#3A463D]">•</span>
+          <span className="text-sm text-[#8B978E]">{blog.date}</span>
+          <span className="text-[#3A463D]">•</span>
+          <span className="text-sm text-[#8B978E]">{blog.readTime}</span>
         </div>
 
         {/* Share row */}
@@ -82,35 +98,37 @@ export default async function BlogPost({
         </div>
 
         {/* Intro / description */}
-        <p className="mt-10 max-w-3xl text-lg leading-8 text-neutral-600 sm:text-xl">
+        <p className="mt-10 max-w-3xl text-lg leading-8 text-[#8B978E] sm:text-xl">
           {blog.description}
         </p>
 
-        {/* Content grid: sidebar + article body */}
-        <div className="mt-14 grid grid-cols-1 items-start gap-12 lg:grid-cols-[260px_1fr]">
-          {/* Sidebar — sticky directly on the grid item, pinned to its own height */}
-          <div className="order-2 self-start lg:sticky lg:top-24 lg:order-1 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
-            <PostSidebar sections={blog.sections} />
-          </div>
-
-          {/* Main content */}
-          <div className="order-1 max-w-3xl lg:order-2">
+        {/* Content: sidebar pinned via JS, article body alongside */}
+        <div className="mt-14">
+          <StickyLayout sidebar={<PostSidebar sections={blog.sections} />}>
             {/* Quick cost reference table */}
-            <div className="mb-16 overflow-hidden rounded-2xl border border-neutral-200">
-              <div className="border-b border-neutral-200 bg-neutral-50 px-6 py-4">
-                <h2 className="text-base font-bold text-neutral-900" style={{ fontFamily: "var(--font-sora)" }}>
+            <div className="mb-16 overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-800">
+              <div className="border-b border-zinc-700 bg-zinc-800 px-6 py-4">
+                <h2
+                  className="text-base font-bold text-[#F4F7F3]"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
                   Quick cost reference
                 </h2>
-                <p className="mt-1 text-sm text-neutral-500">
+                <p className="mt-1 text-sm text-[#8B978E]">
                   Typical 2026 price ranges for Indian businesses. Details below.
                 </p>
               </div>
               <table className="w-full text-sm">
                 <tbody>
                   {costSnapshot.map((row, i) => (
-                    <tr key={row.item} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50/60"}>
-                      <td className="px-6 py-3 font-medium text-neutral-700">{row.item}</td>
-                      <td className="px-6 py-3 text-right font-semibold text-neutral-900">{row.range}</td>
+                    <tr
+                      key={row.item}
+                      className={i % 2 === 0 ? "bg-zinc-800" : "bg-zinc-900/60"}
+                    >
+                      <td className="px-6 py-3 font-medium text-[#C7D0C9]">{row.item}</td>
+                      <td className="px-6 py-3 text-right font-bold text-white">
+                        {row.range}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -121,13 +139,16 @@ export default async function BlogPost({
               {blog.sections.map((section) => (
                 <section id={`section-${section.id}`} key={section.id} className="scroll-mt-24">
                   <h2
-                    className="mb-5 text-2xl font-bold leading-tight sm:text-3xl"
-                    style={{ fontFamily: "var(--font-sora)" }}
+                    className="mb-5 text-2xl font-extrabold leading-tight sm:text-3xl"
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     {section.heading}
                   </h2>
                   {section.content.split("\n\n").map((para, i) => (
-                    <p key={i} className="mb-5 text-base leading-7 text-neutral-700 sm:text-[17px] sm:leading-8">
+                    <p
+                      key={i}
+                      className="mb-5 text-base leading-7 text-[#C7D0C9] sm:text-[17px] sm:leading-8"
+                    >
                       {para}
                     </p>
                   ))}
@@ -139,48 +160,48 @@ export default async function BlogPost({
             {blog.faqs && blog.faqs.length > 0 && (
               <section className="mt-20">
                 <h2
-                  className="mb-8 text-2xl font-bold sm:text-3xl"
-                  style={{ fontFamily: "var(--font-sora)" }}
+                  className="mb-8 text-2xl font-extrabold sm:text-3xl"
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   Frequently Asked Questions
                 </h2>
-                <div className="divide-y divide-neutral-200 rounded-2xl border border-neutral-200">
+                <div className="divide-y divide-[#2A332D] rounded-2xl border border-[#2A332D] bg-zinc-800">
                   {blog.faqs.map((faq, index) => (
-                    <details key={index} className="group p-6 open:bg-neutral-50/60">
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-neutral-900">
+                    <details key={index} className="group p-6 open:bg-zinc-800">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-[#F4F7F3]">
                         {faq.question}
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-sm text-neutral-500 transition group-open:rotate-45">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#3A463D] text-sm text-[#8B978E] transition group-open:rotate-45 group-open:border-[#a2fa8e] group-open:text-[#a2fa8e]">
                           +
                         </span>
                       </summary>
-                      <p className="mt-3 text-[15px] leading-7 text-neutral-600">{faq.answer}</p>
+                      <p className="mt-3 text-[15px] leading-7 text-[#8B978E]">{faq.answer}</p>
                     </details>
                   ))}
                 </div>
               </section>
             )}
 
-            {/* CTA */}
-            <div className="mt-20 rounded-3xl border border-neutral-200 bg-neutral-900 p-10 sm:p-12">
+            {/* CTA — zinc-800 block, green kept as the accent */}
+            <div className="mt-20 rounded-3xl bg-zinc-800 p-10 sm:p-12">
               <h3
-                className="text-2xl font-bold text-white sm:text-3xl"
-                style={{ fontFamily: "var(--font-sora)" }}
+                className="text-2xl font-extrabold text-[#F4F7F3] sm:text-3xl"
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Need a website for your business?
               </h3>
-              <p className="mt-3 max-w-xl text-neutral-300">
+              <p className="mt-3 max-w-xl text-gray-400">
                 We build fast, modern and SEO-optimized websites that help
                 businesses generate more leads and grow online — with a clear,
                 fixed quote before any work starts.
               </p>
               <a
                 href="/#contact"
-                className="mt-7 inline-flex items-center rounded-full bg-orange-600 px-7 py-3 text-sm font-semibold text-white transition hover:bg-orange-500"
+                className="mt-7 inline-flex items-center rounded-full bg-[#a2fa8e] px-7 py-3 text-sm font-semibold text-[#0E1310] transition hover:bg-[#bdfcac]"
               >
                 Get Free Consultation
               </a>
             </div>
-          </div>
+          </StickyLayout>
         </div>
       </article>
     </div>
