@@ -12,16 +12,6 @@ const founders = [
     portfolio: "https://sanjith-portfolio-vcym-sanjithreddy08-7244s-projects.vercel.app/",
     resume: "https://drive.google.com/file/d/1cQ3QijDkOKSbsNUQ2VH1m4RPl5fTDyXR/view?usp=drivesdk",
   },
-  {
-    name: "Alvala Madhavan",
-    roles: ["Co-Founder", "Full Stack Developer", "Backend Developer"],
-    image: "https://www.image2url.com/r2/default/images/1781367576234-7f65d4d1-9443-4996-b414-e15df9383834.jpeg",
-    bio: "Expert in building robust, scalable backend architectures and full-stack solutions. Focused on performance optimization, database design, and creating seamless API integrations.",
-    github: "https://github.com/madhavanpc-30",
-    linkedin: "https://www.linkedin.com/in/madhavan-alvala-631198216?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    portfolio: "https://madhavan-alvala-portfolio-c726a76e.base44.app/",
-    resume: "https://drive.google.com/file/d/1cQ3QijDkOKSbsNUQ2VH1m4RPl5fTDyXR/view?usp=drivesdk",
-  },
 ];
 
 export default function FoundersPage() {
