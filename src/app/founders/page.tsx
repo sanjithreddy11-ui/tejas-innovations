@@ -6,7 +6,7 @@ const founders = [
     name: "Yaramada Sanjith Reddy",
     roles: ["Founder", "Tech Enthusiast", "AI Innovator"],
     image:
-      "https://www.image2url.com/r2/default/images/1781367349019-dd00ba69-8448-4872-b418-272891d3ae82.jpeg",
+      "/founder.png",
     bio: "An 18-year-old entrepreneur passionate about digital transformation, artificial intelligence, and building products that simplify business operations and deliver lasting value.",
     highlights: [
       " Founder of Tejas Innovations and aspiring entrepreneur",
