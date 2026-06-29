@@ -85,7 +85,7 @@ export default function AboutCards() {
               <div className="relative z-10 p-8 h-full flex flex-col justify-between">
                 <div>
                   <h1 className="text-black text-5xl font-normal">
-                    Meet the Founders
+                    Meet the Founder
                   </h1>
                 </div>
 
