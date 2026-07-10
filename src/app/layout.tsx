@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/logo.png",
+    icon: "/og-image.png",
   },
 
   title: {
@@ -77,7 +77,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Tejas Innovations",
     url: "https://tejasinnovations.in",
-    logo: "https://tejasinnovations.in/logo.png",
+    logo: "https://tejasinnovations.in/og-image.png",
     description:
       "Web development, SEO, branding and digital solutions for businesses.",
   };
