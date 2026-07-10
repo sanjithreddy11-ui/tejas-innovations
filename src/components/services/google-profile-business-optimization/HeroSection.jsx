@@ -56,9 +56,8 @@ export default function HeroSection() {
                 className="text-[#A2FA8E]"
                 style={{ textShadow: "0 0 60px rgba(162,250,142,0.3)" }}
               >
-                PROFILE
+                GROWTH
                 <br />
-                OPTIMIZATION
               </span>
             </motion.h1>
 

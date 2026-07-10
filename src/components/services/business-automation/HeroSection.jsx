@@ -48,15 +48,15 @@ export default function HeroSection() {
               className="font-heading font-black text-white leading-[0.9] tracking-tighter"
               style={{ fontSize: "clamp(4rem, 7.5vw, 9rem)" }}
             >
-             BUSINESS
-              <br />
              AUTOMATION
+              <br />
+             THAT
               <br />
               <span
                 className="text-[#A2FA8E]"
                 style={{ textShadow: "0 0 60px rgba(162,250,142,0.3)" }}
               >
-                THAT SAVES
+                WORKS
                 <br />
                 TIME
               </span>

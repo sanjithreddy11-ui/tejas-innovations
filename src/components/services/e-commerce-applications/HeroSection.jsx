@@ -55,9 +55,9 @@ export default function HeroSection() {
                 className="text-[#A2FA8E]"
                 style={{ textShadow: "0 0 60px rgba(162,250,142,0.3)" }}
               >
-                EXPERIENCES
+                THAT
                 <br />
-               THAT DRIVE REVENUE
+               SELLS
               </span>
             </motion.h1>
 
