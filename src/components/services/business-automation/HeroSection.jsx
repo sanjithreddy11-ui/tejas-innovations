@@ -48,17 +48,16 @@ export default function HeroSection() {
               className="font-heading font-black text-white leading-[0.9] tracking-tighter"
               style={{ fontSize: "clamp(4rem, 7.5vw, 9rem)" }}
             >
-             AUTOMATION
+             AUTOMATE
               <br />
-             THAT
+              YOUR
               <br />
               <span
                 className="text-[#A2FA8E]"
                 style={{ textShadow: "0 0 60px rgba(162,250,142,0.3)" }}
               >
-                WORKS
+                BUSINESS
                 <br />
-                TIME
               </span>
             </motion.h1>
 
