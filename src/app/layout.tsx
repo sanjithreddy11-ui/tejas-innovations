@@ -68,11 +68,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-  modal,
+  children
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -91,9 +89,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
   {children}
-
-  {modal}
-
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
