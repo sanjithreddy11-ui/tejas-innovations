@@ -17,7 +17,13 @@ export default function ServiceCarousel({
   services,
   onConfigureClick,
 }) {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(() => {
+  if (typeof window !== "undefined") {
+    const saved = sessionStorage.getItem("services-active");
+    return saved ? Number(saved) : 0;
+  }
+  return 0;
+});
   const [isHovered, setIsHovered] = useState(false);
 
   const n = services.length;
@@ -37,9 +43,13 @@ export default function ServiceCarousel({
       goNext,
       AUTOPLAY_INTERVAL
     );
+    
 
     return () => clearInterval(interval);
   }, [goNext, isHovered]);
+  useEffect(() => {
+  sessionStorage.setItem("services-active", active.toString());
+}, [active]);
 
   const getDiff = (index) => {
     let diff = index - active;
