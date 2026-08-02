@@ -69,7 +69,34 @@ export default function AboutCards() {
             </div>
           </motion.div>
 
-          
+           {/* CARD 3 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="relative rounded-[28px] overflow-hidden min-h-[380px] block cursor-pointer"
+            >
+              <img
+                src="about-card.webp"
+                alt="Meet The Founders"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                <div>
+                  <h1 className="text-black text-5xl font-normal">
+                    Meet the Founder
+                  </h1>
+                </div>
+
+                <div className="flex justify-end">
+                  <ArrowRight
+                    size={100}
+                    className="text-black/10"
+                    strokeWidth={1.5}
+                  />
+                </div>
+              </div>
+            </motion.div>
 
         </div>
       </div>
