@@ -8,9 +8,7 @@ export default function SectionLabel({ number, label }) {
       viewport={{ once: true }}
       className="flex items-center gap-3 mb-6"
     >
-      <span className=" font-mono text-sm">
-        {number}
-      </span>
+      
 
       <div className="w-12 h-px bg-zinc-700" />
 
